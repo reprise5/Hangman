@@ -12,8 +12,8 @@ public class main {
         
          WordShuffle game = new WordShuffle();
          
-         String randomWord = game.doWordBag1();
-         System.out.println("Word:" + randomWord);
+//         String randomWord = game.doWordBag1();
+//         System.out.println("Word:" + randomWord);
         
         
     }

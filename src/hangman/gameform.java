@@ -30,10 +30,29 @@ public class gameform extends javax.swing.JFrame {
         Bbutton = new javax.swing.JButton();
         Dbutton = new javax.swing.JButton();
         DifficultyLabel = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        DifficultyCombobox = new javax.swing.JComboBox();
         startGameButton = new javax.swing.JButton();
+        Ebutton = new javax.swing.JButton();
+        Fbutton = new javax.swing.JButton();
+        Gbuton = new javax.swing.JButton();
+        Ibutton = new javax.swing.JButton();
+        Hbutton = new javax.swing.JButton();
+        Jbuton = new javax.swing.JButton();
+        Dbutton8 = new javax.swing.JButton();
+        Dbutton9 = new javax.swing.JButton();
+        Dbutton10 = new javax.swing.JButton();
+        Dbutton11 = new javax.swing.JButton();
+        Dbutton12 = new javax.swing.JButton();
+        Lbutton = new javax.swing.JButton();
+        Cbutton1 = new javax.swing.JButton();
+        Kbutton = new javax.swing.JButton();
+        Dbutton13 = new javax.swing.JButton();
+        triesLeftCountLabel = new javax.swing.JLabel();
+        triesLeftScreen = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Hangman");
+        setResizable(false);
 
         hangScreenPanel.setLayout(null);
 
@@ -63,9 +82,69 @@ public class gameform extends javax.swing.JFrame {
 
         DifficultyLabel.setText("Difficulty:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Easy", "Medium", "Hard" }));
+        DifficultyCombobox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Easy", "Medium", "Hard" }));
 
         startGameButton.setText("START GAME");
+        startGameButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                startGameButtonActionPerformed(evt);
+            }
+        });
+
+        Ebutton.setText("E");
+        Ebutton.setToolTipText("");
+
+        Fbutton.setText("F");
+        Fbutton.setToolTipText("");
+
+        Gbuton.setText("G");
+        Gbuton.setToolTipText("");
+
+        Ibutton.setText("I");
+        Ibutton.setToolTipText("");
+
+        Hbutton.setText("H");
+        Hbutton.setToolTipText("");
+
+        Jbuton.setText("J");
+        Jbuton.setToolTipText("");
+
+        Dbutton8.setText("D");
+        Dbutton8.setToolTipText("");
+
+        Dbutton9.setText("D");
+        Dbutton9.setToolTipText("");
+
+        Dbutton10.setText("D");
+        Dbutton10.setToolTipText("");
+
+        Dbutton11.setText("D");
+        Dbutton11.setToolTipText("");
+
+        Dbutton12.setText("D");
+        Dbutton12.setToolTipText("");
+
+        Lbutton.setText("L");
+        Lbutton.setToolTipText("");
+
+        Cbutton1.setText("C");
+        Cbutton1.setToolTipText("");
+
+        Kbutton.setText("K");
+        Kbutton.setToolTipText("");
+        Kbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KbuttonActionPerformed(evt);
+            }
+        });
+
+        Dbutton13.setText("D");
+        Dbutton13.setToolTipText("");
+
+        triesLeftCountLabel.setText("Tries Left:");
+
+        triesLeftScreen.setEditable(false);
+        triesLeftScreen.setFocusable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,42 +152,86 @@ public class gameform extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addComponent(hangScreenPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(triesLeftCountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(triesLeftScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(DifficultyLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(DifficultyCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(startGameButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(35, 35, 35)
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(158, 158, 158)
                                 .addComponent(Abutton)
-                                .addGap(8, 8, 8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Bbutton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Cbutton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Dbutton)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(hangScreenPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(160, 160, 160)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(DifficultyLabel)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(startGameButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Ebutton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Fbutton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Gbuton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hbutton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Ibutton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Jbuton)))
+                        .addGap(0, 48, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(181, 181, 181)
+                .addComponent(Kbutton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Lbutton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Cbutton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Dbutton13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Dbutton12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Dbutton10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Dbutton11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Dbutton9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Dbutton8)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(hangScreenPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(DifficultyLabel)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(DifficultyCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(triesLeftCountLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(startGameButton)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(startGameButton)
+                            .addComponent(triesLeftScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(hangScreenPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -116,27 +239,96 @@ public class gameform extends javax.swing.JFrame {
                     .addComponent(Abutton)
                     .addComponent(Cbutton)
                     .addComponent(Bbutton)
-                    .addComponent(Dbutton))
-                .addContainerGap(197, Short.MAX_VALUE))
+                    .addComponent(Dbutton)
+                    .addComponent(Ebutton)
+                    .addComponent(Fbutton)
+                    .addComponent(Gbuton)
+                    .addComponent(Hbutton)
+                    .addComponent(Ibutton)
+                    .addComponent(Jbuton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Kbutton)
+                    .addComponent(Cbutton1)
+                    .addComponent(Lbutton)
+                    .addComponent(Dbutton13)
+                    .addComponent(Dbutton12)
+                    .addComponent(Dbutton10)
+                    .addComponent(Dbutton11)
+                    .addComponent(Dbutton9)
+                    .addComponent(Dbutton8))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
 
         Abutton.getAccessibleContext().setAccessibleName("Abutton");
         DifficultyLabel.getAccessibleContext().setAccessibleName("DifficultyLabel");
+        triesLeftCountLabel.getAccessibleContext().setAccessibleName(":");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     //A-Button Pressed
     private void AbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AbuttonActionPerformed
-        
+    hangScreen.setIcon(new javax.swing.ImageIcon("/home/reprise/Dropbox/Programming/01 Java/Hangman/hangImg/wrong1.png"));    
         
         
         
     }//GEN-LAST:event_AbuttonActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    //START GAME BUTTON!!!! ------------------------------================-----------------------
+    private void startGameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startGameButtonActionPerformed
+        WordShuffle game = new WordShuffle();
+        hangScreen.setIcon(new javax.swing.ImageIcon("/home/reprise/Dropbox/Programming/01 Java/Hangman/hangImg/post.png")); 
+        
+        difficulty = DifficultyCombobox.getSelectedIndex();
+        System.out.println("difficulty index: " + difficulty );
+        //index 0 is easy, index 1 is medium, index 2 is hard.
+        
+        if (difficulty == 0){
+            //easy game started
+            wordToGuess = game.doWordBag1();
+            System.out.println("Word: " + wordToGuess);
+           
+            //get length of wordToGuess string.
+            //use that length to draw that many underscores on the form.
+            
+            //when the user presses a letter, each letter will loop until wordToGuess.length looking for
+            //all letters taht exist in the string.
+            
+            
+            
+            
+        }
+        else if (difficulty == 1){
+            //medium game started
+            wordToGuess = game.doWordBag2();
+            System.out.println("Word: " + wordToGuess);
+            
+            
+            
+            
+        }
+        
+        else if (difficulty == 2){
+            //hard game started
+            wordToGuess = game.doWordBag3();
+            System.out.println("Word: " + wordToGuess);
+            
+            
+            
+            
+        }
+        
+    }//GEN-LAST:event_startGameButtonActionPerformed
+
+    private void KbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KbuttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_KbuttonActionPerformed
+
+
+    
+    
+    
     public static void main(String args[]) {
          
         /* Set the Nimbus look and feel */
@@ -181,17 +373,36 @@ public class gameform extends javax.swing.JFrame {
     private javax.swing.JButton Abutton;
     private javax.swing.JButton Bbutton;
     private javax.swing.JButton Cbutton;
+    private javax.swing.JButton Cbutton1;
     private javax.swing.JButton Dbutton;
+    private javax.swing.JButton Dbutton10;
+    private javax.swing.JButton Dbutton11;
+    private javax.swing.JButton Dbutton12;
+    private javax.swing.JButton Dbutton13;
+    private javax.swing.JButton Dbutton8;
+    private javax.swing.JButton Dbutton9;
+    private javax.swing.JComboBox DifficultyCombobox;
     private javax.swing.JLabel DifficultyLabel;
+    private javax.swing.JButton Ebutton;
+    private javax.swing.JButton Fbutton;
+    private javax.swing.JButton Gbuton;
+    private javax.swing.JButton Hbutton;
+    private javax.swing.JButton Ibutton;
+    private javax.swing.JButton Jbuton;
+    private javax.swing.JButton Kbutton;
+    private javax.swing.JButton Lbutton;
     private javax.swing.JLabel hangScreen;
     private javax.swing.JPanel hangScreenPanel;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JButton startGameButton;
+    private javax.swing.JLabel triesLeftCountLabel;
+    private javax.swing.JTextField triesLeftScreen;
     // End of variables declaration//GEN-END:variables
 
 //GLOBAL VARIABLES:
 int difficulty = 0;
+String wordToGuess = "";
+int chancesLeftCounter = 6;
 
 }
 
