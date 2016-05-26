@@ -25,92 +25,114 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="hangScreenPanel" min="-2" pref="273" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="hangScreenPanel" min="-2" pref="273" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                                      <Component id="triesLeftCountLabel" min="-2" pref="78" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="triesLeftScreen" min="-2" pref="38" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="DifficultyLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="DifficultyCombobox" min="-2" pref="91" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="startGameButton" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="guesserScreen1" min="-2" pref="491" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                              <Component id="jSeparator1" min="-2" pref="710" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                              <Component id="triesLeftCountLabel" min="-2" pref="78" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
-                              <Component id="Abutton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Bbutton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Cbutton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Dbutton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Ebutton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Fbutton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Gbuton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Hbutton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Ibutton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Jbuton" min="-2" max="-2" attributes="0"/>
+                              <Component id="triesLeftScreen" min="-2" pref="38" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="49" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="DifficultyLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="DifficultyCombobox" min="-2" pref="91" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="startGameButton" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="guesserScreen" alignment="1" min="-2" pref="464" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="GuessthewordLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="GuessWordBox" min="-2" pref="169" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="GuessEnterButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="5" pref="51" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
-              <Component id="Kbutton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="Lbutton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="Cbutton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="Dbutton13" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="Dbutton12" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="Dbutton10" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="Dbutton11" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="Dbutton9" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="Dbutton8" min="-2" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="jSeparator1" min="-2" pref="710" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
+                      <Component id="Abutton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="Bbutton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="Cbutton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="Dbutton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="Ebutton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="Fbutton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="Gbutton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="Hbutton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="Ibutton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="Jbutton" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
+                      <Component id="Kbutton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="Tbutton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Ubutton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Vbutton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Wbutton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Xbutton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Ybutton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Zbutton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="Lbutton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Mbutton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Nbutton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Obutton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Pbutton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Qbutton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Rbutton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Sbutton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -136,8 +158,16 @@
                           <Component id="triesLeftScreen" min="-2" pref="42" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="guesserScreen1" min="-2" pref="55" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                      <Component id="guesserScreen" min="-2" pref="55" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="GuessEnterButton" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="GuessWordBox" alignment="3" pref="34" max="32767" attributes="0"/>
+                              <Component id="GuessthewordLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <Component id="jSeparator1" min="-2" pref="19" max="-2" attributes="0"/>
@@ -148,25 +178,35 @@
                   <Component id="Dbutton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Ebutton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Fbutton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Gbuton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Gbutton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Hbutton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Ibutton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Jbuton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Jbutton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Abutton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Cbutton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Mbutton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Lbutton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Dbutton13" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Dbutton12" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Dbutton10" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Dbutton11" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Dbutton9" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Dbutton8" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Nbutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Obutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Pbutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Qbutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Rbutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Sbutton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Kbutton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="88" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="Vbutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Ubutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Wbutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Xbutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Ybutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Zbutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Tbutton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="34" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -256,7 +296,7 @@
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Gbuton">
+    <Component class="javax.swing.JButton" name="Gbutton">
       <Properties>
         <Property name="text" type="java.lang.String" value="G"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
@@ -274,40 +314,40 @@
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Jbuton">
+    <Component class="javax.swing.JButton" name="Jbutton">
       <Properties>
         <Property name="text" type="java.lang.String" value="J"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Dbutton8">
+    <Component class="javax.swing.JButton" name="Sbutton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="D"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="label" type="java.lang.String" value="S"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Rbutton">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="label" type="java.lang.String" value="R"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Pbutton">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="label" type="java.lang.String" value="P"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Qbutton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Q"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Dbutton9">
+    <Component class="javax.swing.JButton" name="Obutton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="D"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="Dbutton10">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="D"/>
-        <Property name="toolTipText" type="java.lang.String" value=""/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="Dbutton11">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="D"/>
-        <Property name="toolTipText" type="java.lang.String" value=""/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="Dbutton12">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="D"/>
-        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="label" type="java.lang.String" value="O"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="Lbutton">
@@ -316,16 +356,19 @@
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Cbutton1">
+    <Component class="javax.swing.JButton" name="Mbutton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="C"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="label" type="java.lang.String" value="M"/>
       </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="M"/>
+      </AccessibilityProperties>
     </Component>
-    <Component class="javax.swing.JButton" name="Dbutton13">
+    <Component class="javax.swing.JButton" name="Nbutton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="D"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="label" type="java.lang.String" value="N"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="triesLeftCountLabel">
@@ -351,7 +394,7 @@
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="guesserScreen1">
+    <Component class="javax.swing.JTextField" name="guesserScreen">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -370,6 +413,74 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="A"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AbuttonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="Tbutton">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="label" type="java.lang.String" value="T"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Ubutton">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="label" type="java.lang.String" value="U"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Vbutton">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="label" type="java.lang.String" value="V"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Wbutton">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="label" type="java.lang.String" value="W"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Xbutton">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="label" type="java.lang.String" value="X"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Ybutton">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="label" type="java.lang.String" value="Y"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Zbutton">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="label" type="java.lang.String" value="Z"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="GuessWordBox">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="18" style="0"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="GuessEnterButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Enter"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="GuessthewordLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Dialog" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Guess the word:"/>
       </Properties>
     </Component>
   </SubComponents>

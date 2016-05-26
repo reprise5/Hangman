@@ -6,13 +6,12 @@ package hangman;
  */
 public class gameform extends javax.swing.JFrame {
 
-    /**
-     * Creates new form game form
-     */
+    
+    //Creates new form game form
     public gameform() {
         initComponents();
     }
-
+    //=================================Generated=Code================================================
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,23 +32,33 @@ public class gameform extends javax.swing.JFrame {
         startGameButton = new javax.swing.JButton();
         Ebutton = new javax.swing.JButton();
         Fbutton = new javax.swing.JButton();
-        Gbuton = new javax.swing.JButton();
+        Gbutton = new javax.swing.JButton();
         Ibutton = new javax.swing.JButton();
         Hbutton = new javax.swing.JButton();
-        Jbuton = new javax.swing.JButton();
-        Dbutton8 = new javax.swing.JButton();
-        Dbutton9 = new javax.swing.JButton();
-        Dbutton10 = new javax.swing.JButton();
-        Dbutton11 = new javax.swing.JButton();
-        Dbutton12 = new javax.swing.JButton();
+        Jbutton = new javax.swing.JButton();
+        Sbutton = new javax.swing.JButton();
+        Rbutton = new javax.swing.JButton();
+        Pbutton = new javax.swing.JButton();
+        Qbutton = new javax.swing.JButton();
+        Obutton = new javax.swing.JButton();
         Lbutton = new javax.swing.JButton();
-        Cbutton1 = new javax.swing.JButton();
-        Dbutton13 = new javax.swing.JButton();
+        Mbutton = new javax.swing.JButton();
+        Nbutton = new javax.swing.JButton();
         triesLeftCountLabel = new javax.swing.JLabel();
         triesLeftScreen = new javax.swing.JTextField();
         Kbutton = new javax.swing.JButton();
-        guesserScreen1 = new javax.swing.JTextField();
+        guesserScreen = new javax.swing.JTextField();
         Abutton = new javax.swing.JButton();
+        Tbutton = new javax.swing.JButton();
+        Ubutton = new javax.swing.JButton();
+        Vbutton = new javax.swing.JButton();
+        Wbutton = new javax.swing.JButton();
+        Xbutton = new javax.swing.JButton();
+        Ybutton = new javax.swing.JButton();
+        Zbutton = new javax.swing.JButton();
+        GuessWordBox = new javax.swing.JTextField();
+        GuessEnterButton = new javax.swing.JButton();
+        GuessthewordLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hangman");
@@ -90,8 +99,8 @@ public class gameform extends javax.swing.JFrame {
         Fbutton.setText("F");
         Fbutton.setToolTipText("");
 
-        Gbuton.setText("G");
-        Gbuton.setToolTipText("");
+        Gbutton.setText("G");
+        Gbutton.setToolTipText("");
 
         Ibutton.setText("I");
         Ibutton.setToolTipText("");
@@ -99,32 +108,32 @@ public class gameform extends javax.swing.JFrame {
         Hbutton.setText("H");
         Hbutton.setToolTipText("");
 
-        Jbuton.setText("J");
-        Jbuton.setToolTipText("");
+        Jbutton.setText("J");
+        Jbutton.setToolTipText("");
 
-        Dbutton8.setText("D");
-        Dbutton8.setToolTipText("");
+        Sbutton.setToolTipText("");
+        Sbutton.setLabel("S");
 
-        Dbutton9.setText("D");
-        Dbutton9.setToolTipText("");
+        Rbutton.setToolTipText("");
+        Rbutton.setLabel("R");
 
-        Dbutton10.setText("D");
-        Dbutton10.setToolTipText("");
+        Pbutton.setToolTipText("");
+        Pbutton.setLabel("P");
 
-        Dbutton11.setText("D");
-        Dbutton11.setToolTipText("");
+        Qbutton.setText("Q");
+        Qbutton.setToolTipText("");
 
-        Dbutton12.setText("D");
-        Dbutton12.setToolTipText("");
+        Obutton.setToolTipText("");
+        Obutton.setLabel("O");
 
         Lbutton.setText("L");
         Lbutton.setToolTipText("");
 
-        Cbutton1.setText("C");
-        Cbutton1.setToolTipText("");
+        Mbutton.setToolTipText("");
+        Mbutton.setLabel("M");
 
-        Dbutton13.setText("D");
-        Dbutton13.setToolTipText("");
+        Nbutton.setToolTipText("");
+        Nbutton.setLabel("N");
 
         triesLeftCountLabel.setText("Tries Left:");
 
@@ -135,92 +144,145 @@ public class gameform extends javax.swing.JFrame {
         Kbutton.setText("K");
         Kbutton.setToolTipText("");
 
-        guesserScreen1.setEditable(false);
-        guesserScreen1.setBackground(new java.awt.Color(153, 255, 255));
-        guesserScreen1.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
-        guesserScreen1.setToolTipText("This is the word you need to guess.");
-        guesserScreen1.setFocusable(false);
-        guesserScreen1.setName(""); // NOI18N
-        guesserScreen1.setRequestFocusEnabled(false);
+        guesserScreen.setEditable(false);
+        guesserScreen.setBackground(new java.awt.Color(153, 255, 255));
+        guesserScreen.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        guesserScreen.setToolTipText("This is the word you need to guess.");
+        guesserScreen.setFocusable(false);
+        guesserScreen.setName(""); // NOI18N
+        guesserScreen.setRequestFocusEnabled(false);
 
         Abutton.setText("A");
         Abutton.setToolTipText("");
+        Abutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AbuttonActionPerformed(evt);
+            }
+        });
+
+        Tbutton.setToolTipText("");
+        Tbutton.setLabel("T");
+
+        Ubutton.setToolTipText("");
+        Ubutton.setLabel("U");
+
+        Vbutton.setToolTipText("");
+        Vbutton.setLabel("V");
+
+        Wbutton.setToolTipText("");
+        Wbutton.setLabel("W");
+
+        Xbutton.setToolTipText("");
+        Xbutton.setLabel("X");
+
+        Ybutton.setToolTipText("");
+        Ybutton.setLabel("Y");
+
+        Zbutton.setToolTipText("");
+        Zbutton.setLabel("Z");
+
+        GuessWordBox.setBackground(new java.awt.Color(255, 255, 204));
+        GuessWordBox.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+
+        GuessEnterButton.setText("Enter");
+
+        GuessthewordLabel.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        GuessthewordLabel.setText("Guess the word:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addComponent(hangScreenPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(hangScreenPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(1, 1, 1)
-                                        .addComponent(triesLeftCountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(triesLeftScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(DifficultyLabel)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(DifficultyCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(startGameButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGap(1, 1, 1)
+                                .addComponent(triesLeftCountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(guesserScreen1, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(triesLeftScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(DifficultyLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(DifficultyCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(startGameButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(guesserScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(GuessthewordLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(GuessWordBox, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(GuessEnterButton)))
+                        .addGap(5, 51, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(158, 158, 158)
+                        .addComponent(Abutton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Bbutton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Cbutton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Dbutton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Ebutton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Fbutton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Gbutton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Hbutton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Ibutton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Jbutton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(181, 181, 181)
+                        .addComponent(Kbutton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(Tbutton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Ubutton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Vbutton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Wbutton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Xbutton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Ybutton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Zbutton))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(158, 158, 158)
-                                .addComponent(Abutton)
+                                .addComponent(Lbutton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Bbutton)
+                                .addComponent(Mbutton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Cbutton)
+                                .addComponent(Nbutton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Dbutton)
+                                .addComponent(Obutton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Ebutton)
+                                .addComponent(Pbutton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Fbutton)
+                                .addComponent(Qbutton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Gbuton)
+                                .addComponent(Rbutton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Hbutton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Ibutton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Jbuton)))
-                        .addGap(0, 49, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(181, 181, 181)
-                .addComponent(Kbutton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Lbutton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Cbutton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Dbutton13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Dbutton12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Dbutton10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Dbutton11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Dbutton9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Dbutton8)
+                                .addComponent(Sbutton)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -241,8 +303,14 @@ public class gameform extends javax.swing.JFrame {
                             .addComponent(startGameButton)
                             .addComponent(triesLeftScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(guesserScreen1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(76, 76, 76)))
+                        .addComponent(guesserScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(GuessEnterButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(GuessWordBox, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                                .addComponent(GuessthewordLabel)))
+                        .addGap(30, 30, 30)))
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -251,42 +319,87 @@ public class gameform extends javax.swing.JFrame {
                     .addComponent(Dbutton)
                     .addComponent(Ebutton)
                     .addComponent(Fbutton)
-                    .addComponent(Gbuton)
+                    .addComponent(Gbutton)
                     .addComponent(Hbutton)
                     .addComponent(Ibutton)
-                    .addComponent(Jbuton)
+                    .addComponent(Jbutton)
                     .addComponent(Abutton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Cbutton1)
+                    .addComponent(Mbutton)
                     .addComponent(Lbutton)
-                    .addComponent(Dbutton13)
-                    .addComponent(Dbutton12)
-                    .addComponent(Dbutton10)
-                    .addComponent(Dbutton11)
-                    .addComponent(Dbutton9)
-                    .addComponent(Dbutton8)
+                    .addComponent(Nbutton)
+                    .addComponent(Obutton)
+                    .addComponent(Pbutton)
+                    .addComponent(Qbutton)
+                    .addComponent(Rbutton)
+                    .addComponent(Sbutton)
                     .addComponent(Kbutton))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Vbutton)
+                    .addComponent(Ubutton)
+                    .addComponent(Wbutton)
+                    .addComponent(Xbutton)
+                    .addComponent(Ybutton)
+                    .addComponent(Zbutton)
+                    .addComponent(Tbutton))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         DifficultyLabel.getAccessibleContext().setAccessibleName("DifficultyLabel");
+        Mbutton.getAccessibleContext().setAccessibleName("M");
         triesLeftCountLabel.getAccessibleContext().setAccessibleName(":");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    //START GAME BUTTON!!!!======================================================================================================================
+    
+    //=================================END=Generated=Code=============================================
+    
+    
+    
+    
+    //...............................START GAME BUTTON!!!!...........................................
     private void startGameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startGameButtonActionPerformed
-        WordShuffle game = new WordShuffle();
-        hangScreen.setIcon(new javax.swing.ImageIcon("/home/reprise/Dropbox/Programming/01 Java/Hangman/hangImg/post.png")); 
+        //First re-enable all of the buttons, they could be disabled.
+        Abutton.setEnabled(true);
+        Bbutton.setEnabled(true);
+        Cbutton.setEnabled(true);
+        Dbutton.setEnabled(true);
+        Ebutton.setEnabled(true);
+        Fbutton.setEnabled(true);
+        Gbutton.setEnabled(true);
+        Hbutton.setEnabled(true);
+        Ibutton.setEnabled(true);
+        Jbutton.setEnabled(true);
+        Kbutton.setEnabled(true);
+        Lbutton.setEnabled(true);
+        Mbutton.setEnabled(true);
+        Nbutton.setEnabled(true);
+        Obutton.setEnabled(true);
+        Pbutton.setEnabled(true);
+        Qbutton.setEnabled(true);
+        Rbutton.setEnabled(true);
+        Sbutton.setEnabled(true);
+        Tbutton.setEnabled(true);
+        Ubutton.setEnabled(true);
+        Vbutton.setEnabled(true);
+        Wbutton.setEnabled(true);
+        Xbutton.setEnabled(true);
+        Ybutton.setEnabled(true);
+        Zbutton.setEnabled(true);
+        GuessEnterButton.setEnabled(true);
+        GuessWordBox.setEnabled(true);
+        
+        //set icon and tries counter            
+        hangScreen.setIcon(new javax.swing.ImageIcon("/home/reprise/Dropbox/Programming/01 Java/Hangman/hangImg/post.png"));
+        chancesLeftCounter = 6;
         triesLeftScreen.setText("6");
         
+        //get user requested difficulty. index 0 is easy, index 1 is medium, index 2 is hard.
         difficulty = DifficultyCombobox.getSelectedIndex();
         System.out.println("difficulty index: " + difficulty );
-        //index 0 is easy, index 1 is medium, index 2 is hard.
-        
-        
+       
         if (difficulty == 0){
             //easy game started
             wordToGuess = game.doWordBag1();
@@ -301,9 +414,10 @@ public class gameform extends javax.swing.JFrame {
                 stringBuilder.append("_ ");
                 underscores = stringBuilder.toString();
             }
-            System.out.println("underscores" + underscores);
-            guesserScreen1.setText(underscores);
-            guesserScreen1.setToolTipText("The word you need to guess has " + wordToGuessLength + " letters.");
+            
+            System.out.println("underscores:" + underscores);
+            guesserScreen.setText(underscores);
+            guesserScreen.setToolTipText("The word you need to guess has " + wordToGuessLength + " letters.");
         }
         
         else if (difficulty == 1){
@@ -320,9 +434,10 @@ public class gameform extends javax.swing.JFrame {
                 stringBuilder.append("_ ");
                 underscores = stringBuilder.toString();
             }
+            
             System.out.println("underscores:" + underscores);
-            guesserScreen1.setText(underscores);
-            guesserScreen1.setToolTipText("The word you need to guess has " + wordToGuessLength + " letters.");
+            guesserScreen.setText(underscores);
+            guesserScreen.setToolTipText("The word you need to guess has " + wordToGuessLength + " letters.");
 
         }
         
@@ -341,18 +456,89 @@ public class gameform extends javax.swing.JFrame {
                 underscores = stringBuilder.toString();
             }
             System.out.println("underscores" + underscores);
-            guesserScreen1.setText(underscores);
-            guesserScreen1.setToolTipText("The word you need to guess has " + wordToGuessLength + " letters.");
+            guesserScreen.setText(underscores);
+            guesserScreen.setToolTipText("The word you need to guess has " + wordToGuessLength + " letters.");
         }   
     }//GEN-LAST:event_startGameButtonActionPerformed
 
+    //A Button Press
+    private void AbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AbuttonActionPerformed
+        letter = "a";
+        
+        //check if or not the response is correct.
+        correctResponse = game.testLetterResponse(letter);
+        if (correctResponse){
+            //call the sub that will get the string that will change the label
+            //change the guesserScreen
+            //disable this button.
+        }
+        else{
+            chancesLeftCounter--;
+            sChancesLeft = Integer.toString(chancesLeftCounter);
+            triesLeftScreen.setText(sChancesLeft);
+            changeHangmanIcon();  
+        }
+    }//GEN-LAST:event_AbuttonActionPerformed
+    //based on how many tries left, will update the hangman image.
+    private void changeHangmanIcon(){            
+        switch (chancesLeftCounter){
+                case 5: 
+                    hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong1.png"));
+                    break;
+                case 4: 
+                    hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong2.png"));
+                    break;
+                case 3: 
+                    hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong3.png"));
+                    break;
+                case 2: 
+                    hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong4.png"));
+                    break;
+                case 1: 
+                    hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong5.png"));
+                    break;
+                case 0: 
+                    //the game is over, the user lost.
+                    hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong6.png"));
+                    //and then disable all of the buttons.  they will be re-enabled when the user clicks "start game".
+                    Abutton.setEnabled(false);
+                    Bbutton.setEnabled(false);
+                    Cbutton.setEnabled(false);
+                    Dbutton.setEnabled(false);
+                    Ebutton.setEnabled(false);
+                    Fbutton.setEnabled(false);
+                    Gbutton.setEnabled(false);
+                    Hbutton.setEnabled(false);
+                    Ibutton.setEnabled(false);
+                    Jbutton.setEnabled(false);
+                    Kbutton.setEnabled(false);
+                    Lbutton.setEnabled(false);
+                    Mbutton.setEnabled(false);
+                    Nbutton.setEnabled(false);
+                    Obutton.setEnabled(false);
+                    Pbutton.setEnabled(false);
+                    Qbutton.setEnabled(false);
+                    Rbutton.setEnabled(false);
+                    Sbutton.setEnabled(false);
+                    Tbutton.setEnabled(false);
+                    Ubutton.setEnabled(false);
+                    Vbutton.setEnabled(false);
+                    Wbutton.setEnabled(false);
+                    Xbutton.setEnabled(false);
+                    Ybutton.setEnabled(false);
+                    Zbutton.setEnabled(false);
+                    GuessEnterButton.setEnabled(false);
+                     GuessWordBox.setEnabled(false);
+                    
+                    
+                    break;
+            }
+    }
+    
+    
     public static void main(String args[]) {
          
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -378,35 +564,40 @@ public class gameform extends javax.swing.JFrame {
             }
         });
     }
-    
-    //If letter wrong, change the Hangman screen with this code:
-    // hangScreen.setIcon(new javax.swing.ImageIcon("/home/reprise/Dropbox/Programming/01 Java/Hangman/hangImg/post.png"));
-    //find out how to make it by local directory.
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Abutton;
     private javax.swing.JButton Bbutton;
     private javax.swing.JButton Cbutton;
-    private javax.swing.JButton Cbutton1;
     private javax.swing.JButton Dbutton;
-    private javax.swing.JButton Dbutton10;
-    private javax.swing.JButton Dbutton11;
-    private javax.swing.JButton Dbutton12;
-    private javax.swing.JButton Dbutton13;
-    private javax.swing.JButton Dbutton8;
-    private javax.swing.JButton Dbutton9;
     private javax.swing.JComboBox DifficultyCombobox;
     private javax.swing.JLabel DifficultyLabel;
     private javax.swing.JButton Ebutton;
     private javax.swing.JButton Fbutton;
-    private javax.swing.JButton Gbuton;
+    private javax.swing.JButton Gbutton;
+    private javax.swing.JButton GuessEnterButton;
+    private javax.swing.JTextField GuessWordBox;
+    private javax.swing.JLabel GuessthewordLabel;
     private javax.swing.JButton Hbutton;
     private javax.swing.JButton Ibutton;
-    private javax.swing.JButton Jbuton;
+    private javax.swing.JButton Jbutton;
     private javax.swing.JButton Kbutton;
     private javax.swing.JButton Lbutton;
-    private javax.swing.JTextField guesserScreen1;
+    private javax.swing.JButton Mbutton;
+    private javax.swing.JButton Nbutton;
+    private javax.swing.JButton Obutton;
+    private javax.swing.JButton Pbutton;
+    private javax.swing.JButton Qbutton;
+    private javax.swing.JButton Rbutton;
+    private javax.swing.JButton Sbutton;
+    private javax.swing.JButton Tbutton;
+    private javax.swing.JButton Ubutton;
+    private javax.swing.JButton Vbutton;
+    private javax.swing.JButton Wbutton;
+    private javax.swing.JButton Xbutton;
+    private javax.swing.JButton Ybutton;
+    private javax.swing.JButton Zbutton;
+    private javax.swing.JTextField guesserScreen;
     private javax.swing.JLabel hangScreen;
     private javax.swing.JPanel hangScreenPanel;
     private javax.swing.JSeparator jSeparator1;
@@ -416,11 +607,16 @@ public class gameform extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
 //GLOBAL VARIABLES:
+WordShuffle game = new WordShuffle();
+boolean correctResponse = false;
 int difficulty = 0;
 String wordToGuess = "";
+String letter;
 String underscores = "";
 int wordToGuessLength = 0;
 int chancesLeftCounter = 6;
+String sChancesLeft;
+
 
 }
 
