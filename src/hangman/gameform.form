@@ -243,19 +243,31 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="C"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Bbutton">
       <Properties>
         <Property name="text" type="java.lang.String" value="B"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Dbutton">
       <Properties>
         <Property name="text" type="java.lang.String" value="D"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="DifficultyLabel">
       <Properties>
@@ -288,88 +300,144 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="E"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Fbutton">
       <Properties>
         <Property name="text" type="java.lang.String" value="F"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Gbutton">
       <Properties>
         <Property name="text" type="java.lang.String" value="G"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Ibutton">
       <Properties>
         <Property name="text" type="java.lang.String" value="I"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="IbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Hbutton">
       <Properties>
         <Property name="text" type="java.lang.String" value="H"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="HbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Jbutton">
       <Properties>
         <Property name="text" type="java.lang.String" value="J"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Sbutton">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="label" type="java.lang.String" value="S"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Rbutton">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="label" type="java.lang.String" value="R"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Pbutton">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="label" type="java.lang.String" value="P"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Qbutton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Q"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Obutton">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="label" type="java.lang.String" value="O"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ObuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Lbutton">
       <Properties>
         <Property name="text" type="java.lang.String" value="L"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Mbutton">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="label" type="java.lang.String" value="M"/>
       </Properties>
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="M"/>
       </AccessibilityProperties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Nbutton">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="label" type="java.lang.String" value="N"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="triesLeftCountLabel">
       <Properties>
@@ -392,7 +460,11 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="K"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="KbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="guesserScreen">
       <Properties>
@@ -413,6 +485,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="A"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AbuttonActionPerformed"/>
@@ -421,44 +494,72 @@
     <Component class="javax.swing.JButton" name="Tbutton">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="label" type="java.lang.String" value="T"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Ubutton">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="label" type="java.lang.String" value="U"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Vbutton">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="label" type="java.lang.String" value="V"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Wbutton">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="label" type="java.lang.String" value="W"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Xbutton">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="label" type="java.lang.String" value="X"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="XbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Ybutton">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="label" type="java.lang.String" value="Y"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="YbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Zbutton">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="label" type="java.lang.String" value="Z"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ZbuttonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="GuessWordBox">
       <Properties>
@@ -468,12 +569,17 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="18" style="0"/>
         </Property>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="GuessEnterButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Enter"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GuessEnterButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="GuessthewordLabel">
       <Properties>

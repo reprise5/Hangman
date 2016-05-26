@@ -8,7 +8,11 @@ import java.util.Random;
 
 
 public class WordShuffle {
+    //GLOBALS
+    StringBuilder stringBuilder = new StringBuilder();
     String wordToGuess;
+    String guesserScreen = "";
+    int count = 0;
     
     //This is the "EASY" difficulty, random word generator
     public String doWordBag1(){
@@ -62,8 +66,48 @@ public class WordShuffle {
     public boolean testLetterResponse(String letter){
         boolean isCorrectLetter = false;
         
+        isCorrectLetter = wordToGuess.contains(letter);
         
-        
+        //Send to console to see the result, the user will see it on their screen another way.
+        System.out.print("Endered Letter: " + letter + " - ");
+        if (isCorrectLetter){
+            System.out.print("EXISTS\n");
+        }
+        else
+            System.out.println("ABSENT");
+
         return isCorrectLetter;
+    }
+    
+    public String getNewGuesserScreen(String letter){
+        boolean containsLetter = false;
+  
+        //this sub will only be called by gameform.java if testLetterResponse returned true.
+        //it is intended to return the new screen.  so if the word is cat, and the user pressed 'a',
+        //it will return "_ a _".  it gets the PREVOUS version of this string (for updating it) here, it's a global.
+
+        if (count == 0){
+            //make the init underscore string.  count serves to test if this is a new game or not.
+            for (int pos = 0; pos < guesserScreen.length(); pos++){
+                stringBuilder.append("_ ");
+                guesserScreen = stringBuilder.toString();
+                System.out.println("GuesserScreen: " + guesserScreen);
+            }
+        }
+        else{
+            //we keep adding to the string.
+            
+            
+            
+            ///....I have avsolutely NOOOOOOO idea how to write this sub...
+            //              FML.
+        }
+        
+       
+        count++;
+        return guesserScreen;
+    }
+    public void resetCount(){
+        count = 0;
     }
 }

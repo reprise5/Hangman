@@ -75,12 +75,30 @@ public class gameform extends javax.swing.JFrame {
 
         Cbutton.setText("C");
         Cbutton.setToolTipText("");
+        Cbutton.setEnabled(false);
+        Cbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CbuttonActionPerformed(evt);
+            }
+        });
 
         Bbutton.setText("B");
         Bbutton.setToolTipText("");
+        Bbutton.setEnabled(false);
+        Bbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BbuttonActionPerformed(evt);
+            }
+        });
 
         Dbutton.setText("D");
         Dbutton.setToolTipText("");
+        Dbutton.setEnabled(false);
+        Dbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DbuttonActionPerformed(evt);
+            }
+        });
 
         DifficultyLabel.setText("Difficulty:");
 
@@ -95,45 +113,129 @@ public class gameform extends javax.swing.JFrame {
 
         Ebutton.setText("E");
         Ebutton.setToolTipText("");
+        Ebutton.setEnabled(false);
+        Ebutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EbuttonActionPerformed(evt);
+            }
+        });
 
         Fbutton.setText("F");
         Fbutton.setToolTipText("");
+        Fbutton.setEnabled(false);
+        Fbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FbuttonActionPerformed(evt);
+            }
+        });
 
         Gbutton.setText("G");
         Gbutton.setToolTipText("");
+        Gbutton.setEnabled(false);
+        Gbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GbuttonActionPerformed(evt);
+            }
+        });
 
         Ibutton.setText("I");
         Ibutton.setToolTipText("");
+        Ibutton.setEnabled(false);
+        Ibutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IbuttonActionPerformed(evt);
+            }
+        });
 
         Hbutton.setText("H");
         Hbutton.setToolTipText("");
+        Hbutton.setEnabled(false);
+        Hbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HbuttonActionPerformed(evt);
+            }
+        });
 
         Jbutton.setText("J");
         Jbutton.setToolTipText("");
+        Jbutton.setEnabled(false);
+        Jbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JbuttonActionPerformed(evt);
+            }
+        });
 
         Sbutton.setToolTipText("");
+        Sbutton.setEnabled(false);
         Sbutton.setLabel("S");
+        Sbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SbuttonActionPerformed(evt);
+            }
+        });
 
         Rbutton.setToolTipText("");
+        Rbutton.setEnabled(false);
         Rbutton.setLabel("R");
+        Rbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RbuttonActionPerformed(evt);
+            }
+        });
 
         Pbutton.setToolTipText("");
+        Pbutton.setEnabled(false);
         Pbutton.setLabel("P");
+        Pbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PbuttonActionPerformed(evt);
+            }
+        });
 
         Qbutton.setText("Q");
         Qbutton.setToolTipText("");
+        Qbutton.setEnabled(false);
+        Qbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QbuttonActionPerformed(evt);
+            }
+        });
 
         Obutton.setToolTipText("");
+        Obutton.setEnabled(false);
         Obutton.setLabel("O");
+        Obutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ObuttonActionPerformed(evt);
+            }
+        });
 
         Lbutton.setText("L");
         Lbutton.setToolTipText("");
+        Lbutton.setEnabled(false);
+        Lbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LbuttonActionPerformed(evt);
+            }
+        });
 
         Mbutton.setToolTipText("");
+        Mbutton.setEnabled(false);
         Mbutton.setLabel("M");
+        Mbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MbuttonActionPerformed(evt);
+            }
+        });
 
         Nbutton.setToolTipText("");
+        Nbutton.setEnabled(false);
         Nbutton.setLabel("N");
+        Nbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NbuttonActionPerformed(evt);
+            }
+        });
 
         triesLeftCountLabel.setText("Tries Left:");
 
@@ -143,6 +245,12 @@ public class gameform extends javax.swing.JFrame {
 
         Kbutton.setText("K");
         Kbutton.setToolTipText("");
+        Kbutton.setEnabled(false);
+        Kbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KbuttonActionPerformed(evt);
+            }
+        });
 
         guesserScreen.setEditable(false);
         guesserScreen.setBackground(new java.awt.Color(153, 255, 255));
@@ -154,6 +262,7 @@ public class gameform extends javax.swing.JFrame {
 
         Abutton.setText("A");
         Abutton.setToolTipText("");
+        Abutton.setEnabled(false);
         Abutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AbuttonActionPerformed(evt);
@@ -161,30 +270,79 @@ public class gameform extends javax.swing.JFrame {
         });
 
         Tbutton.setToolTipText("");
+        Tbutton.setEnabled(false);
         Tbutton.setLabel("T");
+        Tbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TbuttonActionPerformed(evt);
+            }
+        });
 
         Ubutton.setToolTipText("");
+        Ubutton.setEnabled(false);
         Ubutton.setLabel("U");
+        Ubutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UbuttonActionPerformed(evt);
+            }
+        });
 
         Vbutton.setToolTipText("");
+        Vbutton.setEnabled(false);
         Vbutton.setLabel("V");
+        Vbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VbuttonActionPerformed(evt);
+            }
+        });
 
         Wbutton.setToolTipText("");
+        Wbutton.setEnabled(false);
         Wbutton.setLabel("W");
+        Wbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                WbuttonActionPerformed(evt);
+            }
+        });
 
         Xbutton.setToolTipText("");
+        Xbutton.setEnabled(false);
         Xbutton.setLabel("X");
+        Xbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                XbuttonActionPerformed(evt);
+            }
+        });
 
         Ybutton.setToolTipText("");
+        Ybutton.setEnabled(false);
         Ybutton.setLabel("Y");
+        Ybutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                YbuttonActionPerformed(evt);
+            }
+        });
 
         Zbutton.setToolTipText("");
+        Zbutton.setEnabled(false);
         Zbutton.setLabel("Z");
+        Zbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ZbuttonActionPerformed(evt);
+            }
+        });
 
         GuessWordBox.setBackground(new java.awt.Color(255, 255, 204));
         GuessWordBox.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        GuessWordBox.setEnabled(false);
 
         GuessEnterButton.setText("Enter");
+        GuessEnterButton.setEnabled(false);
+        GuessEnterButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GuessEnterButtonActionPerformed(evt);
+            }
+        });
 
         GuessthewordLabel.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         GuessthewordLabel.setText("Guess the word:");
@@ -357,11 +515,13 @@ public class gameform extends javax.swing.JFrame {
     //=================================END=Generated=Code=============================================
     
     
-    
-    
-    //...............................START GAME BUTTON!!!!...........................................
+    //................................START GAME BUTTON!!!!............................................
     private void startGameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startGameButtonActionPerformed
-        //First re-enable all of the buttons, they could be disabled.
+        //reset the counter for a subroutine in WordShuffle so it knows we are on a new game, and clear the guess box
+        game.resetCount();
+        GuessWordBox.setText("");
+        
+        //re-enable all of the buttons, they are disabled until a new game is started.
         Abutton.setEnabled(true);
         Bbutton.setEnabled(true);
         Cbutton.setEnabled(true);
@@ -390,6 +550,8 @@ public class gameform extends javax.swing.JFrame {
         Zbutton.setEnabled(true);
         GuessEnterButton.setEnabled(true);
         GuessWordBox.setEnabled(true);
+        GuessEnterButton.setEnabled(true);
+        GuessWordBox.setEnabled(true);
         
         //set icon and tries counter            
         hangScreen.setIcon(new javax.swing.ImageIcon("/home/reprise/Dropbox/Programming/01 Java/Hangman/hangImg/post.png"));
@@ -398,7 +560,7 @@ public class gameform extends javax.swing.JFrame {
         
         //get user requested difficulty. index 0 is easy, index 1 is medium, index 2 is hard.
         difficulty = DifficultyCombobox.getSelectedIndex();
-        System.out.println("difficulty index: " + difficulty );
+        System.out.println("\ndifficulty index: " + difficulty );
        
         if (difficulty == 0){
             //easy game started
@@ -415,7 +577,7 @@ public class gameform extends javax.swing.JFrame {
                 underscores = stringBuilder.toString();
             }
             
-            System.out.println("underscores:" + underscores);
+            //System.out.println("underscores:" + underscores);
             guesserScreen.setText(underscores);
             guesserScreen.setToolTipText("The word you need to guess has " + wordToGuessLength + " letters.");
         }
@@ -468,74 +630,270 @@ public class gameform extends javax.swing.JFrame {
         //check if or not the response is correct.
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            //call the sub that will get the string that will change the label
-            //change the guesserScreen
-            //disable this button.
+            //call the sub that will get the string that will change the label, then do so and disable the button.
+            guesserScreenVar = game.getNewGuesserScreen(letter);
+            guesserScreen.setText(guesserScreenVar);
+            Abutton.setEnabled(false);
         }
         else{
             chancesLeftCounter--;
             sChancesLeft = Integer.toString(chancesLeftCounter);
             triesLeftScreen.setText(sChancesLeft);
-            changeHangmanIcon();  
+            changeHangmanIcon(); 
+            Abutton.setEnabled(false);
         }
     }//GEN-LAST:event_AbuttonActionPerformed
+
+    //Send in the word guessed in the text box
+    private void GuessEnterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuessEnterButtonActionPerformed
+        guessedWord = GuessWordBox.getText();
+        guessedWord = guessedWord.toLowerCase();
+        if (guessedWord.equals(wordToGuess)){
+            chancesLeftCounter = 0;  //so that the var is 0 for the Switch Statement.
+            changeHangmanIcon();     //only using this to disable the keys.
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            //winner!
+        }
+        else{
+            //they're wrong so take away a chance left.
+            chancesLeftCounter--;
+            sChancesLeft = Integer.toString(chancesLeftCounter);
+            triesLeftScreen.setText(sChancesLeft);
+            changeHangmanIcon(); 
+        }
+        
+        
+    }//GEN-LAST:event_GuessEnterButtonActionPerformed
+
+    //B Button Press
+    private void BbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BbuttonActionPerformed
+
+        
+        
+    }//GEN-LAST:event_BbuttonActionPerformed
+
+    //C Button Press
+    private void CbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CbuttonActionPerformed
+        
+        
+        
+        
+    }//GEN-LAST:event_CbuttonActionPerformed
+
+    //D Button Press
+    private void DbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DbuttonActionPerformed
+        
+        
+                
+    }//GEN-LAST:event_DbuttonActionPerformed
+
+    //E Button Press
+    private void EbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EbuttonActionPerformed
+        
+        
+                
+    }//GEN-LAST:event_EbuttonActionPerformed
+
+    //F Button Press
+    private void FbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FbuttonActionPerformed
+        
+        
+        
+    }//GEN-LAST:event_FbuttonActionPerformed
+
+    //G Button Press
+    private void GbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GbuttonActionPerformed
+        
+        
+        
+    }//GEN-LAST:event_GbuttonActionPerformed
+
+    //H Button Press
+    private void HbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HbuttonActionPerformed
+       
+        
+        
+    }//GEN-LAST:event_HbuttonActionPerformed
+
+    //I Button Press
+    private void IbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IbuttonActionPerformed
+
+        
+        
+    }//GEN-LAST:event_IbuttonActionPerformed
+
+    //J Button Press
+    private void JbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbuttonActionPerformed
+
+        
+        
+    }//GEN-LAST:event_JbuttonActionPerformed
+
+    //K Button Press
+    private void KbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KbuttonActionPerformed
+
+        
+        
+    }//GEN-LAST:event_KbuttonActionPerformed
+
+    //L Button Press
+    private void LbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LbuttonActionPerformed
+
+        
+        
+    }//GEN-LAST:event_LbuttonActionPerformed
+
+    //M Button Press
+    private void MbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MbuttonActionPerformed
+
+        
+        
+    }//GEN-LAST:event_MbuttonActionPerformed
+
+    //N Button Press
+    private void NbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NbuttonActionPerformed
+
+        
+        
+    }//GEN-LAST:event_NbuttonActionPerformed
+
+    //O Button Press
+    private void ObuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ObuttonActionPerformed
+
+        
+        
+    }//GEN-LAST:event_ObuttonActionPerformed
+
+    //P Button Press
+    private void PbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PbuttonActionPerformed
+
+        
+        
+    }//GEN-LAST:event_PbuttonActionPerformed
+
+    //Q Button Press
+    private void QbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QbuttonActionPerformed
+
+        
+        
+    }//GEN-LAST:event_QbuttonActionPerformed
+
+    //R Button Press
+    private void RbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RbuttonActionPerformed
+
+        
+        
+    }//GEN-LAST:event_RbuttonActionPerformed
+
+    //S Button Press
+    private void SbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SbuttonActionPerformed
+
+        
+        
+    }//GEN-LAST:event_SbuttonActionPerformed
+
+    //T Button Press
+    private void TbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TbuttonActionPerformed
+
+        
+        
+    }//GEN-LAST:event_TbuttonActionPerformed
+
+    //U Button Press
+    private void UbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UbuttonActionPerformed
+
+        
+        
+    }//GEN-LAST:event_UbuttonActionPerformed
+
+    //V Button Press
+    private void VbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VbuttonActionPerformed
+
+        
+        
+    }//GEN-LAST:event_VbuttonActionPerformed
+
+    //W Button Press
+    private void WbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WbuttonActionPerformed
+
+        
+        
+    }//GEN-LAST:event_WbuttonActionPerformed
+
+    //X Button Press
+    private void XbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XbuttonActionPerformed
+
+        
+        
+    }//GEN-LAST:event_XbuttonActionPerformed
+
+    //Y Button Press
+    private void YbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YbuttonActionPerformed
+
+        
+        
+    }//GEN-LAST:event_YbuttonActionPerformed
+
+    //Z Button Press
+    private void ZbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZbuttonActionPerformed
+        
+        
+        
+    }//GEN-LAST:event_ZbuttonActionPerformed
     //based on how many tries left, will update the hangman image.
     private void changeHangmanIcon(){            
         switch (chancesLeftCounter){
-                case 5: 
-                    hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong1.png"));
-                    break;
-                case 4: 
-                    hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong2.png"));
-                    break;
-                case 3: 
-                    hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong3.png"));
-                    break;
-                case 2: 
-                    hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong4.png"));
-                    break;
-                case 1: 
-                    hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong5.png"));
-                    break;
-                case 0: 
-                    //the game is over, the user lost.
-                    hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong6.png"));
-                    //and then disable all of the buttons.  they will be re-enabled when the user clicks "start game".
-                    Abutton.setEnabled(false);
-                    Bbutton.setEnabled(false);
-                    Cbutton.setEnabled(false);
-                    Dbutton.setEnabled(false);
-                    Ebutton.setEnabled(false);
-                    Fbutton.setEnabled(false);
-                    Gbutton.setEnabled(false);
-                    Hbutton.setEnabled(false);
-                    Ibutton.setEnabled(false);
-                    Jbutton.setEnabled(false);
-                    Kbutton.setEnabled(false);
-                    Lbutton.setEnabled(false);
-                    Mbutton.setEnabled(false);
-                    Nbutton.setEnabled(false);
-                    Obutton.setEnabled(false);
-                    Pbutton.setEnabled(false);
-                    Qbutton.setEnabled(false);
-                    Rbutton.setEnabled(false);
-                    Sbutton.setEnabled(false);
-                    Tbutton.setEnabled(false);
-                    Ubutton.setEnabled(false);
-                    Vbutton.setEnabled(false);
-                    Wbutton.setEnabled(false);
-                    Xbutton.setEnabled(false);
-                    Ybutton.setEnabled(false);
-                    Zbutton.setEnabled(false);
-                    GuessEnterButton.setEnabled(false);
-                     GuessWordBox.setEnabled(false);
-                    
-                    
-                    break;
-            }
+            case 5: 
+                hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong1.png"));
+                break;
+            case 4: 
+                hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong2.png"));
+                break;
+            case 3: 
+                hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong3.png"));
+                break;
+            case 2: 
+                hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong4.png"));
+                break;
+            case 1: 
+                hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong5.png"));
+                break;
+            case 0: 
+                //the game is over, the user lost.
+                hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong6.png"));
+                //and then disable all of the buttons.  they will be re-enabled when the user clicks "start game".
+                Abutton.setEnabled(false);
+                Bbutton.setEnabled(false);
+                Cbutton.setEnabled(false);
+                Dbutton.setEnabled(false);
+                Ebutton.setEnabled(false);
+                Fbutton.setEnabled(false);
+                Gbutton.setEnabled(false);
+                Hbutton.setEnabled(false);
+                Ibutton.setEnabled(false);
+                Jbutton.setEnabled(false);
+                Kbutton.setEnabled(false);
+                Lbutton.setEnabled(false);
+                Mbutton.setEnabled(false);
+                Nbutton.setEnabled(false);
+                Obutton.setEnabled(false);
+                Pbutton.setEnabled(false);
+                Qbutton.setEnabled(false);
+                Rbutton.setEnabled(false);
+                Sbutton.setEnabled(false);
+                Tbutton.setEnabled(false);
+                Ubutton.setEnabled(false);
+                Vbutton.setEnabled(false);
+                Wbutton.setEnabled(false);
+                Xbutton.setEnabled(false);
+                Ybutton.setEnabled(false);
+                Zbutton.setEnabled(false);
+                GuessEnterButton.setEnabled(false);
+                GuessWordBox.setEnabled(false);
+                break;      
+        }
     }
-    
-    
+   
     public static void main(String args[]) {
          
         /* Set the Nimbus look and feel */
@@ -608,17 +966,16 @@ public class gameform extends javax.swing.JFrame {
 
 //GLOBAL VARIABLES:
 WordShuffle game = new WordShuffle();
-boolean correctResponse = false;
-int difficulty = 0;
-String wordToGuess = "";
-String letter;
-String underscores = "";
-int wordToGuessLength = 0;
-int chancesLeftCounter = 6;
-String sChancesLeft;
+boolean correctResponse = false;//used to collect the returned value of testLetterResponse(String letter); to check if the char response exists AT ALL before further processing.
+int difficulty = 0;             //difficulty index from the combo box.
+String wordToGuess = "";        //this is the word to test against.  the secret word.
+String guessedWord = "";        //what the user TYPED to guess.
+String letter;                  //guessed letter from a button
+String underscores = "";        //initial guesserScreen variable.
+int wordToGuessLength = 0;      //how long the wordToGuess is, used to draw the underscores.
+int chancesLeftCounter = 6;     //how many tries are left.  decrements with wrong attempts.
+String sChancesLeft;            //the string version of chancesLeftCounter, to be sent to be displayed.
+String guesserScreenVar;        //used to display the guess screen after letters are typed in. guesserScreen is the component it goes to.
 
 
 }
-
-
-
