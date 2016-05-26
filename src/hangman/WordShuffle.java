@@ -8,10 +8,11 @@ import java.util.Random;
 
 
 public class WordShuffle {
+    String wordToGuess;
     
     //This is the "EASY" difficulty, random word generator
     public String doWordBag1(){
-        String wordToGuess = "";
+        wordToGuess = "";
         int randomNumber = 0;
         Random randomGenerator = new Random();
        
@@ -27,7 +28,7 @@ public class WordShuffle {
     }
     //This is the "MEDIUM" difficulty, random word generator
     public String doWordBag2(){
-        String wordToGuess = "";
+        wordToGuess = "";
         int randomNumber = 0;
         Random randomGenerator = new Random();
        
@@ -43,7 +44,7 @@ public class WordShuffle {
     }
     //This is the "HARD" difficulty, random word generator   
     public String doWordBag3(){
-        String wordToGuess = "";
+        wordToGuess = "";
         int randomNumber = 0;
         Random randomGenerator = new Random();
        
@@ -57,5 +58,17 @@ public class WordShuffle {
         
         return wordToGuess;
     }
-    
+    //is the letter there?
+    public boolean testLetterResponse(char letter){
+        /**
+        * this will test to see if the letter guessed by the user is at all in the word to be guessed.
+        * if true, the letter button will call another sub to find which slots to fill.  if false, the letter button will
+        * decrement the counter, and set the tries left screen down one.
+        */
+        boolean isCorrectLetter = false;
+        
+        
+        
+        return isCorrectLetter;
+    }
 }
