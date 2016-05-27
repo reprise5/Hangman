@@ -36,9 +36,9 @@ public class WordShuffle {
         int randomNumber = 0;
         Random randomGenerator = new Random();
        
-        String WordBag2[]= new String[] {"shadow","continent","chocolate","rectangle","population","sandwich","bookcase","philosopher","dishonest","equipment",
-                                         "generous","confusion","friendship","airplane","strawberry","information","continent","landscape","staircase","sneakers",
-                                         "automobile","technician","climate","acceleration","mountain"};
+        String WordBag2[]= new String[] {"centipede","continent","chocolate","rectangle","population","sandwich","exciting","philosopher","dishonest","equipment",
+                                         "generous","confusion","friendship","airplane","strawberry","information","continent","landscape","staircase","zipper",
+                                         "automobile","technician","arpeggio","acceleration","mountain"};
         
         randomNumber = randomGenerator.nextInt(24); // from 0 to 24, is 25 entries.
         wordToGuess = WordBag2[randomNumber];
@@ -53,7 +53,7 @@ public class WordShuffle {
         Random randomGenerator = new Random();
        
         String WordBag3[]= new String[] {"vociferous","extrapolate","tertiary","vicarious","ferrous","animosity","elucidate","phenomenon","circumnavigate","platitudinous",
-                                         "","","","","","","","","","",
+                                         "sphynx","","","","","","","","","",
                                          "","","","",""};
         
         randomNumber = randomGenerator.nextInt(24); // from 0 to 24, is 25 entries.
@@ -63,10 +63,11 @@ public class WordShuffle {
         return wordToGuess;
     }
     //is the letter there?
-    public boolean testLetterResponse(String letter){
+    public boolean testLetterResponse(char letter){
         boolean isCorrectLetter = false;
+        String sLetter = String.valueOf(letter); //converted char to string.
         
-        isCorrectLetter = wordToGuess.contains(letter);
+        isCorrectLetter = wordToGuess.contains(sLetter);
         
         //Send to console to see the result, the user will see it on their screen another way.
         System.out.print("Endered Letter: " + letter + " - ");
@@ -79,29 +80,69 @@ public class WordShuffle {
         return isCorrectLetter;
     }
     
-    public String getNewGuesserScreen(String letter){
+    public String getNewGuesserScreen(char letter){
         boolean containsLetter = false;
-  
         //this sub will only be called by gameform.java if testLetterResponse returned true.
         //it is intended to return the new screen.  so if the word is cat, and the user pressed 'a',
         //it will return "_ a _".  it gets the PREVOUS version of this string (for updating it) here, it's a global.
 
         if (count == 0){
             //make the init underscore string.  count serves to test if this is a new game or not.
-            for (int pos = 0; pos < guesserScreen.length(); pos++){
+            for (int pos = 0; pos < wordToGuess.length(); pos++){
                 stringBuilder.append("_ ");
                 guesserScreen = stringBuilder.toString();
-                System.out.println("GuesserScreen: " + guesserScreen);
+            }
+            
+            int index = 0;
+            int replacerIndex = 0;
+            int var = 0;
+            
+            index = wordToGuess.indexOf(letter);
+            System.out.println("FirstInstanceIndex: " + index);
+            replacerIndex = (index * 2) +1;
+            //guesserScreen = guesserScreen.setCharAt(replacerIndex) ??  Replce at this index.
+                
+            //======================================================        I tried.
+                char[] charArray = guesserScreen.toCharArray();
+                //charArray[replacerIndex] = letter;
+                guesserScreen = charArray.toString();
+                System.out.println("New Screen: " + guesserScreen);
+            //=======================================================
+                
+            while (index >= 0) {
+                index = wordToGuess.indexOf(letter, index + 1);
+                System.out.println("NextInstanceIndex: " + index);
+                
+                if (index != -1){
+                    replacerIndex = (index * 2) +1;
+                    //guesserScreen = guesserScreen.Replace(replacerIndex)? *replace at this index code here*
+                }
             }
         }
-        else{
-            //we keep adding to the string.
+        
+        else{ 
+            int index = 0;
+            int replacerIndex;
+            int var = 0;
             
-            
-            
-            ///....I have avsolutely NOOOOOOO idea how to write this sub...
-            //              FML.
+            index = wordToGuess.indexOf(letter);
+            System.out.println("FirstInstanceIndex: " + index);
+            //replacerIndex = (index * 2) +1;
+            //guesserScreen = guesserScreen.Replace(replacerIndex)? *replace at this index code here*
+           
+            while (index >= 0) {
+                index = wordToGuess.indexOf(letter, index + 1);
+                System.out.println("NextInstanceIndex: " + index);
+                
+                if (index != -1){
+                    replacerIndex = (index * 2) +1;
+                    //guesserScreen = guesserScreen.Replace(replacerIndex)? *replace at this index code here*
+                }
+            }
+            ///....I have some idea how to write this sub...
         }
+        
+        //======================================================================================
         
        
         count++;

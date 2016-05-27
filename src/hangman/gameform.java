@@ -352,36 +352,35 @@ public class gameform extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(hangScreenPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(hangScreenPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(1, 1, 1)
                                 .addComponent(triesLeftCountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(triesLeftScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(triesLeftScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(DifficultyLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(DifficultyCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(startGameButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(guesserScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(GuessthewordLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(GuessWordBox, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(GuessEnterButton)))
-                        .addGap(5, 51, Short.MAX_VALUE))))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(guesserScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(GuessthewordLabel)
+                                                .addGap(181, 181, 181))
+                                            .addComponent(GuessWordBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(GuessEnterButton)
+                                        .addGap(6, 6, 6))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(startGameButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                            .addComponent(DifficultyLabel)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(DifficultyCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(35, 35, 35)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -441,7 +440,7 @@ public class gameform extends javax.swing.JFrame {
                                 .addComponent(Rbutton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Sbutton)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -458,17 +457,17 @@ public class gameform extends javax.swing.JFrame {
                             .addComponent(triesLeftCountLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(startGameButton)
-                            .addComponent(triesLeftScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(triesLeftScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(startGameButton))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(guesserScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(GuessEnterButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(GuessWordBox, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                                .addComponent(GuessthewordLabel)))
-                        .addGap(30, 30, 30)))
+                                .addComponent(GuessWordBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(GuessthewordLabel))
+                            .addComponent(GuessEnterButton))
+                        .addGap(28, 28, 28)))
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -508,6 +507,7 @@ public class gameform extends javax.swing.JFrame {
         DifficultyLabel.getAccessibleContext().setAccessibleName("DifficultyLabel");
         Mbutton.getAccessibleContext().setAccessibleName("M");
         triesLeftCountLabel.getAccessibleContext().setAccessibleName(":");
+        GuessWordBox.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -520,7 +520,6 @@ public class gameform extends javax.swing.JFrame {
         //reset the counter for a subroutine in WordShuffle so it knows we are on a new game, and clear the guess box
         game.resetCount();
         GuessWordBox.setText("");
-        
         //re-enable all of the buttons, they are disabled until a new game is started.
         Abutton.setEnabled(true);
         Bbutton.setEnabled(true);
@@ -597,7 +596,7 @@ public class gameform extends javax.swing.JFrame {
                 underscores = stringBuilder.toString();
             }
             
-            System.out.println("underscores:" + underscores);
+            //System.out.println("underscores:" + underscores);
             guesserScreen.setText(underscores);
             guesserScreen.setToolTipText("The word you need to guess has " + wordToGuessLength + " letters.");
 
@@ -617,7 +616,7 @@ public class gameform extends javax.swing.JFrame {
                 stringBuilder.append("_ ");
                 underscores = stringBuilder.toString();
             }
-            System.out.println("underscores" + underscores);
+            //System.out.println("underscores" + underscores);
             guesserScreen.setText(underscores);
             guesserScreen.setToolTipText("The word you need to guess has " + wordToGuessLength + " letters.");
         }   
@@ -625,14 +624,14 @@ public class gameform extends javax.swing.JFrame {
 
     //A Button Press
     private void AbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AbuttonActionPerformed
-        letter = "a";
+        letter = 'a';
         
         //check if or not the response is correct.
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
             //call the sub that will get the string that will change the label, then do so and disable the button.
             guesserScreenVar = game.getNewGuesserScreen(letter);
-            guesserScreen.setText(guesserScreenVar);
+            //guesserScreen.setText(guesserScreenVar);
             Abutton.setEnabled(false);
         }
         else{
@@ -659,7 +658,8 @@ public class gameform extends javax.swing.JFrame {
             chancesLeftCounter--;
             sChancesLeft = Integer.toString(chancesLeftCounter);
             triesLeftScreen.setText(sChancesLeft);
-            changeHangmanIcon(); 
+            changeHangmanIcon();
+            GuessWordBox.setText("");
         }
         
         
@@ -970,7 +970,7 @@ boolean correctResponse = false;//used to collect the returned value of testLett
 int difficulty = 0;             //difficulty index from the combo box.
 String wordToGuess = "";        //this is the word to test against.  the secret word.
 String guessedWord = "";        //what the user TYPED to guess.
-String letter;                  //guessed letter from a button
+char letter;                  //guessed letter from a button
 String underscores = "";        //initial guesserScreen variable.
 int wordToGuessLength = 0;      //how long the wordToGuess is, used to draw the underscores.
 int chancesLeftCounter = 6;     //how many tries are left.  decrements with wrong attempts.
