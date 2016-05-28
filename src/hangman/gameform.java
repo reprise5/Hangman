@@ -72,6 +72,8 @@ public class gameform extends javax.swing.JFrame {
         letterTile10 = new javax.swing.JTextField();
         letterTile12 = new javax.swing.JTextField();
         letterTile11 = new javax.swing.JTextField();
+        displayRightAnswer = new javax.swing.JLabel();
+        ProgrammerLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hangman");
@@ -83,7 +85,7 @@ public class gameform extends javax.swing.JFrame {
         hangScreen.setAutoscrolls(true);
         hangScreen.setFocusable(false);
         hangScreenPanel.add(hangScreen);
-        hangScreen.setBounds(10, -20, 270, 310);
+        hangScreen.setBounds(10, 0, 250, 280);
         hangScreen.getAccessibleContext().setAccessibleName("IMAGE");
 
         Cbutton.setText("C");
@@ -448,6 +450,11 @@ public class gameform extends javax.swing.JFrame {
         letterTile11.setName(""); // NOI18N
         letterTile11.setRequestFocusEnabled(false);
 
+        displayRightAnswer.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+
+        ProgrammerLabel.setFont(new java.awt.Font("Dialog", 0, 8)); // NOI18N
+        ProgrammerLabel.setText("Programmed by: Danielle Marcoullier");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -458,15 +465,12 @@ public class gameform extends javax.swing.JFrame {
                         .addComponent(hangScreenPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(triesLeftScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
                                 .addGap(1, 1, 1)
                                 .addComponent(triesLeftCountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addGroup(layout.createSequentialGroup()
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -476,10 +480,15 @@ public class gameform extends javax.swing.JFrame {
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                             .addComponent(GuessEnterButton))
                                         .addGroup(layout.createSequentialGroup()
-                                            .addComponent(letterTile1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(letterTile2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                    .addComponent(letterTile1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(letterTile2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addComponent(triesLeftScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(38, 38, 38)))
                                             .addComponent(letterTile3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                             .addComponent(letterTile4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -498,7 +507,8 @@ public class gameform extends javax.swing.JFrame {
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                             .addComponent(letterTile11, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(letterTile12, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(letterTile12, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(displayRightAnswer, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(304, 304, 304)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -565,8 +575,11 @@ public class gameform extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Rbutton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Sbutton)))))
-                .addContainerGap(26, Short.MAX_VALUE))
+                                .addComponent(Sbutton))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(ProgrammerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -588,6 +601,8 @@ public class gameform extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(startGameButton)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(displayRightAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(letterTile1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(letterTile2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -641,7 +656,9 @@ public class gameform extends javax.swing.JFrame {
                     .addComponent(Ybutton)
                     .addComponent(Zbutton)
                     .addComponent(Tbutton))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(ProgrammerLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         DifficultyLabel.getAccessibleContext().setAccessibleName("DifficultyLabel");
@@ -683,8 +700,9 @@ public class gameform extends javax.swing.JFrame {
         letterTile12.setBackground(Color.lightGray);
         letterTile12.setText("");
         
-        //clear the guess word box.
+        //clear the guess word box, and the answer box.
         GuessWordBox.setText("");
+        displayRightAnswer.setText("");
         
         //re-enable all of the buttons, they are disabled until a new game is started.
         Abutton.setEnabled(true);
@@ -764,7 +782,7 @@ public class gameform extends javax.swing.JFrame {
         }   
     }//GEN-LAST:event_startGameButtonActionPerformed
 
-    //A Button Press
+    //A Button PressLength
     private void AbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AbuttonActionPerformed
         letter = 'a';
         sLetter= "a";
@@ -1640,6 +1658,18 @@ public class gameform extends javax.swing.JFrame {
                 Zbutton.setEnabled(false);
                 GuessEnterButton.setEnabled(false);
                 GuessWordBox.setEnabled(false);
+                
+//                //loop through the word and print it out.
+//                wordToGuessLength = wordToGuess.length();
+//                int index = 0;
+//                int letterIndex = 0;
+//                while (index <= wordToGuess.length()){
+//                    
+//                    letter = wordToGuess.charAt(index);                         //this csused a crash with the letter r
+//                    flipTile(index, sLetter);  //need to send over letter.
+//                    index++;
+//                }
+                displayRightAnswer.setText("Correct Word: " + wordToGuess);
                 break;      
         }
     }
@@ -1842,7 +1872,16 @@ public class gameform extends javax.swing.JFrame {
                 break;
             case 1:
                 //flip tile 2 to the letter sent, at this index.
-                letterTile2.setText(letter);
+                letterTile2.setText(letter);                //loop through the word and print it out.
+//                wordToGuessLength = wordToGuess.length();
+//                int index = 0;
+//                int letterIndex = 0;
+//                while (index <= wordToGuess.length()){
+//                    
+//                    letter = wordToGuess.charAt(index);                         //this csused a crash with the letter r
+//                    flipTile(index, sLetter);  //need to send over letter.
+//                    index++;
+//                }
                 break;
             case 2:
                 //flip tile 3 to the letter sent, at this index.
@@ -1938,6 +1977,7 @@ public class gameform extends javax.swing.JFrame {
     private javax.swing.JButton Nbutton;
     private javax.swing.JButton Obutton;
     private javax.swing.JButton Pbutton;
+    private javax.swing.JLabel ProgrammerLabel;
     private javax.swing.JButton Qbutton;
     private javax.swing.JButton Rbutton;
     private javax.swing.JButton Sbutton;
@@ -1948,6 +1988,7 @@ public class gameform extends javax.swing.JFrame {
     private javax.swing.JButton Xbutton;
     private javax.swing.JButton Ybutton;
     private javax.swing.JButton Zbutton;
+    private javax.swing.JLabel displayRightAnswer;
     private javax.swing.JLabel hangScreen;
     private javax.swing.JPanel hangScreenPanel;
     private javax.swing.JSeparator jSeparator1;
