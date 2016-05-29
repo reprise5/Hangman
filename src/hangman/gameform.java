@@ -782,7 +782,7 @@ public class gameform extends javax.swing.JFrame {
         }   
     }//GEN-LAST:event_startGameButtonActionPerformed
 
-    //A Button PressLength
+    //A Button Press
     private void AbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AbuttonActionPerformed
         letter = 'a';
         sLetter= "a";
@@ -1673,11 +1673,9 @@ public class gameform extends javax.swing.JFrame {
                 break;      
         }
     }
-    
+
+    //based on the length of the word, initialize that many tiles with color and putting an underscore in each that are used.
     public void initializeTiles(int wordToGuessLength){
-        //based on the length of the word, initialize that many tiles so the user
-        //knows how many letters are in the word.
-        
         switch (wordToGuessLength){
             case 1:
                 letterTile1.setBackground(Color.cyan);
@@ -1864,6 +1862,7 @@ public class gameform extends javax.swing.JFrame {
         }        
     }
    
+    //flips a tile from having an underscore, to the correct letter.
     public void flipTile(int index, String letter){
         switch (index){
             case 0:
@@ -1873,15 +1872,6 @@ public class gameform extends javax.swing.JFrame {
             case 1:
                 //flip tile 2 to the letter sent, at this index.
                 letterTile2.setText(letter);                //loop through the word and print it out.
-//                wordToGuessLength = wordToGuess.length();
-//                int index = 0;
-//                int letterIndex = 0;
-//                while (index <= wordToGuess.length()){
-//                    
-//                    letter = wordToGuess.charAt(index);                         //this csused a crash with the letter r
-//                    flipTile(index, sLetter);  //need to send over letter.
-//                    index++;
-//                }
                 break;
             case 2:
                 //flip tile 3 to the letter sent, at this index.
