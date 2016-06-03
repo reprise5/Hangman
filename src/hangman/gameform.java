@@ -85,7 +85,7 @@ public class gameform extends javax.swing.JFrame {
         hangScreen.setAutoscrolls(true);
         hangScreen.setFocusable(false);
         hangScreenPanel.add(hangScreen);
-        hangScreen.setBounds(10, 0, 250, 280);
+        hangScreen.setBounds(10, 0, 260, 280);
         hangScreen.getAccessibleContext().setAccessibleName("IMAGE");
 
         Cbutton.setText("C");
@@ -343,11 +343,17 @@ public class gameform extends javax.swing.JFrame {
         GuessWordBox.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         GuessWordBox.setEnabled(false);
 
+        GuessEnterButton.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         GuessEnterButton.setText("Enter");
         GuessEnterButton.setEnabled(false);
         GuessEnterButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GuessEnterButtonActionPerformed(evt);
+            }
+        });
+        GuessEnterButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                GuessEnterButtonKeyPressed(evt);
             }
         });
 
@@ -811,6 +817,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText(""); 
         } 
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_AbuttonActionPerformed
 
     //Send in the word guessed in the text box
@@ -830,7 +843,7 @@ public class gameform extends javax.swing.JFrame {
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
             GuessWordBox.setText("");
-        }       
+        }  
     }//GEN-LAST:event_GuessEnterButtonActionPerformed
 
     //B Button Press
@@ -862,6 +875,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         } 
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_BbuttonActionPerformed
 
     //C Button Press
@@ -893,6 +913,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         } 
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_CbuttonActionPerformed
 
     //D Button Press
@@ -923,7 +950,14 @@ public class gameform extends javax.swing.JFrame {
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
             GuessWordBox.setText("");
-        }     
+        }  
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_DbuttonActionPerformed
 
     //E Button Press
@@ -955,6 +989,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         } 
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_EbuttonActionPerformed
 
     //F Button Press
@@ -986,6 +1027,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         } 
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_FbuttonActionPerformed
 
     //G Button Press
@@ -1016,7 +1064,14 @@ public class gameform extends javax.swing.JFrame {
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
             GuessWordBox.setText("");
-        } 
+        }
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_GbuttonActionPerformed
 
     //H Button Press
@@ -1048,6 +1103,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         }  
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_HbuttonActionPerformed
 
     //I Button Press
@@ -1079,6 +1141,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         } 
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_IbuttonActionPerformed
 
     //J Button Press
@@ -1110,6 +1179,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         }  
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_JbuttonActionPerformed
 
     //K Button Press
@@ -1141,6 +1217,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         } 
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_KbuttonActionPerformed
 
     //L Button Press
@@ -1172,6 +1255,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         } 
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_LbuttonActionPerformed
 
     //M Button Press
@@ -1203,6 +1293,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         } 
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_MbuttonActionPerformed
 
     //N Button Press
@@ -1234,6 +1331,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         } 
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_NbuttonActionPerformed
 
     //O Button Press
@@ -1265,6 +1369,12 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         } 
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_ObuttonActionPerformed
 
     //P Button Press
@@ -1296,6 +1406,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         } 
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_PbuttonActionPerformed
 
     //Q Button Press
@@ -1327,6 +1444,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         } 
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_QbuttonActionPerformed
 
     //R Button Press
@@ -1358,6 +1482,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         } 
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_RbuttonActionPerformed
 
     //S Button Press
@@ -1389,6 +1520,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         }  
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_SbuttonActionPerformed
 
     //T Button Press
@@ -1419,7 +1557,14 @@ public class gameform extends javax.swing.JFrame {
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
             GuessWordBox.setText("");
-        }    
+        } 
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_TbuttonActionPerformed
 
     //U Button Press
@@ -1451,6 +1596,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         }  
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_UbuttonActionPerformed
 
     //V Button Press
@@ -1482,6 +1634,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         } 
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_VbuttonActionPerformed
 
     //W Button Press
@@ -1513,6 +1672,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         } 
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_WbuttonActionPerformed
 
     //X Button Press
@@ -1544,6 +1710,12 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         } 
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_XbuttonActionPerformed
 
     //Y Button Press
@@ -1575,6 +1747,13 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         } 
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_YbuttonActionPerformed
 
     //Z Button Press
@@ -1606,7 +1785,20 @@ public class gameform extends javax.swing.JFrame {
             changeHangmanIcon();
             GuessWordBox.setText("");
         } 
+        
+        win = TestTileWin(wordToGuessLength);
+        if (win){
+            chancesLeftCounter = 0;
+            changeHangmanIcon();
+            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+        }
     }//GEN-LAST:event_ZbuttonActionPerformed
+
+    //is this how you add a keybinding to a button...?  I don't know.
+    private void GuessEnterButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_GuessEnterButtonKeyPressed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_GuessEnterButtonKeyPressed
     
     //based on how many tries left, will update the hangman image.
     private void changeHangmanIcon(){            
@@ -1669,13 +1861,17 @@ public class gameform extends javax.swing.JFrame {
 //                    flipTile(index, sLetter);  //need to send over letter.
 //                    index++;
 //                }
+                
+                //simply display the right answer in a label for now while figuring how to fill in the tiles.
                 displayRightAnswer.setText("Correct Word: " + wordToGuess);
                 break;      
         }
     }
-
-    //based on the length of the word, initialize that many tiles with color and putting an underscore in each that are used.
+    
     public void initializeTiles(int wordToGuessLength){
+        //based on the length of the word, initialize that many tiles so the user
+        //knows how many letters are in the word.
+        
         switch (wordToGuessLength){
             case 1:
                 letterTile1.setBackground(Color.cyan);
@@ -1861,8 +2057,7 @@ public class gameform extends javax.swing.JFrame {
   
         }        
     }
-   
-    //flips a tile from having an underscore, to the correct letter.
+    //Change a previously "activated" (underscore) tile into the letter it is supposed to be after the user guesses it right.
     public void flipTile(int index, String letter){
         switch (index){
             case 0:
@@ -1915,6 +2110,102 @@ public class gameform extends javax.swing.JFrame {
                 break;
         } 
     }
+    
+    //tests if the user won by filling in tiles and not by typing the word in the box.
+    public boolean TestTileWin(int wordToGuessLength){
+        boolean win = false;
+        
+        //based on how many tiles are initialized, or the wordToGuessLength, is how many tiles to check for underscores.
+        switch (wordToGuessLength){
+            case 1:
+                //1 tile initialized, the word is 1 letter long. test that many tiles.
+                if (!letterTile1.getText().equals("_")){
+                    System.out.println("*WIN by tiles* x1");
+                    win = true;
+                }
+                break;
+            case 2:
+                if (!letterTile1.getText().equals("_") && !letterTile2.getText().equals("_")){
+                    System.out.println("*WIN by tiles* x2");
+                    win = true;
+                }
+                break;
+            case 3:
+                if (!letterTile1.getText().equals("_") && !letterTile2.getText().equals("_") && !letterTile3.getText().equals("_")){
+                    System.out.println("*WIN by tiles* x3");
+                    win = true;
+                }
+                break;
+            case 4:
+                if (!letterTile1.getText().equals("_") && !letterTile2.getText().equals("_") && !letterTile3.getText().equals("_") && !letterTile4.getText().equals("_")){
+                    System.out.println("*WIN by tiles* x4");
+                    win = true;
+                }
+                break;
+            case 5:
+                if (!letterTile1.getText().equals("_") && !letterTile2.getText().equals("_") && !letterTile3.getText().equals("_") && !letterTile4.getText().equals("_")
+                        && !letterTile5.getText().equals("_")){
+                    System.out.println("*WIN by tiles* x5");
+                    win = true;
+                }
+                break;
+            case 6:
+                if (!letterTile1.getText().equals("_") && !letterTile2.getText().equals("_") && !letterTile3.getText().equals("_") && !letterTile4.getText().equals("_")
+                        && !letterTile5.getText().equals("_") && !letterTile6.getText().equals("_")){
+                    System.out.println("*WIN by tiles* x6");
+                    win = true;
+                }
+                break;
+            case 7:
+                if (!letterTile1.getText().equals("_") && !letterTile2.getText().equals("_") && !letterTile3.getText().equals("_") && !letterTile4.getText().equals("_")
+                        && !letterTile5.getText().equals("_") && !letterTile6.getText().equals("_") && !letterTile7.getText().equals("_")){
+                    System.out.println("*WIN by tiles* x7");
+                    win = true;
+                }
+                break;
+            case 8:
+                if (!letterTile1.getText().equals("_") && !letterTile2.getText().equals("_") && !letterTile3.getText().equals("_") && !letterTile4.getText().equals("_")
+                        && !letterTile5.getText().equals("_") && !letterTile6.getText().equals("_") && !letterTile7.getText().equals("_") && !letterTile8.getText().equals("_")){
+                    System.out.println("*WIN by tiles* x8");
+                    win = true;
+                }
+                break;
+            case 9:
+                if (!letterTile1.getText().equals("_") && !letterTile2.getText().equals("_") && !letterTile3.getText().equals("_") && !letterTile4.getText().equals("_")
+                        && !letterTile5.getText().equals("_") && !letterTile6.getText().equals("_") && !letterTile7.getText().equals("_") && !letterTile8.getText().equals("_")
+                        && !letterTile9.getText().equals("_")){
+                    System.out.println("*WIN by tiles* x9");
+                    win = true;
+                }
+                break;
+            case 10:
+                if (!letterTile1.getText().equals("_") && !letterTile2.getText().equals("_") && !letterTile3.getText().equals("_") && !letterTile4.getText().equals("_")
+                        && !letterTile5.getText().equals("_") && !letterTile6.getText().equals("_") && !letterTile7.getText().equals("_") && !letterTile8.getText().equals("_")
+                        && !letterTile9.getText().equals("_") && !letterTile10.getText().equals("_")){
+                    System.out.println("*WIN by tiles* x10");
+                    win = true;
+                }
+                break;
+            case 11:
+                if (!letterTile1.getText().equals("_") && !letterTile2.getText().equals("_") && !letterTile3.getText().equals("_") && !letterTile4.getText().equals("_")
+                        && !letterTile5.getText().equals("_") && !letterTile6.getText().equals("_") && !letterTile7.getText().equals("_") && !letterTile8.getText().equals("_")
+                        && !letterTile9.getText().equals("_") && !letterTile10.getText().equals("_") && !letterTile11.getText().equals("_")){
+                    System.out.println("*WIN by tiles* x11");
+                    win = true;
+                }
+                break;
+            case 12:
+                if (!letterTile1.getText().equals("_") && !letterTile2.getText().equals("_") && !letterTile3.getText().equals("_") && !letterTile4.getText().equals("_")
+                        && !letterTile5.getText().equals("_") && !letterTile6.getText().equals("_") && !letterTile7.getText().equals("_") && !letterTile8.getText().equals("_")
+                        && !letterTile9.getText().equals("_") && !letterTile10.getText().equals("_") && !letterTile11.getText().equals("_") && !letterTile12.getText().equals("_")){
+                    System.out.println("*WIN by tiles* x12");
+                    win = true;
+                }
+                break;
+        } //end switch(wordToGuessLength)
+        return win;      
+    }
+    
     
     public static void main(String args[]) {
          
@@ -2002,12 +2293,12 @@ public class gameform extends javax.swing.JFrame {
 //GLOBAL VARIABLES:
 WordShuffle game = new WordShuffle();
 boolean correctResponse = false;//used to collect the returned value of testLetterResponse(String letter); to check if the char response exists AT ALL before further processing.
+boolean win = false;            //used to collect the returned value of testTileWin(int wordToGuessLength);  that tests if there's a win in the tiles.
 int difficulty = 0;             //difficulty index from the combo box.
 String wordToGuess = "";        //this is the word to test against.  the secret word.
 String guessedWord = "";        //what the user TYPED to guess.
 char letter;                    //guessed letter from a button
 String sLetter;                 //string version of char letter, to be sent to flipped tiles. needs to be a string type.
-String underscores = "";        //initial guesserScreen variable.
 int wordToGuessLength = 0;      //how long the wordToGuess is, used to draw the underscores.
 int chancesLeftCounter = 6;     //how many tries are left.  decrements with wrong attempts.
 String sChancesLeft;            //the string version of chancesLeftCounter, to be sent to be displayed.
