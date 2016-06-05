@@ -52,9 +52,9 @@ public class WordShuffle {
         int randomNumber = 0;
         Random randomGenerator = new Random();
        
-        String WordBag3[]= new String[] {"vociferous","extrapolate","tertiary","vicarious","ferrous","animosity","elucidate","phenomenon","circumnavigate","platitudinous",
-                                         "sphynx","","","","","","","","","",
-                                         "","","","",""};
+        String WordBag3[]= new String[] {"vociferous","extrapolate","tertiary","vicarious","ferrous","animosity","elucidate","phenomenon","bellicose","indictment",
+                                         "sphynx","idiosyncrasy","aphorism","hermeneutic","pernicious","epistemology","dietetic","deprecate","sojourn","assent",
+                                         "verdict","congenial","inculcate","zephyr","uxorious"};
         
         randomNumber = randomGenerator.nextInt(24); // from 0 to 24, is 25 entries.
         wordToGuess = WordBag3[randomNumber];
