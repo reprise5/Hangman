@@ -1961,7 +1961,7 @@ public class gameform extends javax.swing.JFrame {
                 letterTile3.setBackground(Color.cyan);
                 letterTile3.setText("_");
                 letterTile4.setBackground(Color.cyan);
-         //loop through the word and print it out.       letterTile4.setText("_");
+                letterTile4.setText("_");
                 letterTile5.setBackground(Color.cyan);
                 letterTile5.setText("_");
                 letterTile6.setBackground(Color.cyan);
