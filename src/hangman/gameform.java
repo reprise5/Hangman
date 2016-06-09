@@ -8,7 +8,7 @@ import java.awt.Color;
  */
 public class gameform extends javax.swing.JFrame {
 
-    
+
     //Creates new form game form
     public gameform() {
         initComponents();
@@ -78,6 +78,13 @@ public class gameform extends javax.swing.JFrame {
         WinsScreen = new javax.swing.JTextField();
         WinsLabel = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        FileMenu = new javax.swing.JMenu();
+        SaveScoreMenuItem = new javax.swing.JMenuItem();
+        QuitGameMenuItem = new javax.swing.JMenuItem();
+        GameMenu = new javax.swing.JMenu();
+        StartGameMenuItem = new javax.swing.JMenuItem();
+        ResetScoreMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hangman");
@@ -477,6 +484,45 @@ public class gameform extends javax.swing.JFrame {
 
         jLabel1.setText("LOSSES");
 
+        FileMenu.setText("File");
+
+        SaveScoreMenuItem.setText("Save Score");
+        SaveScoreMenuItem.setToolTipText("Saves your current score to a file.");
+        SaveScoreMenuItem.setEnabled(false);
+        FileMenu.add(SaveScoreMenuItem);
+
+        QuitGameMenuItem.setText("Quit");
+        QuitGameMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QuitGameMenuItemActionPerformed(evt);
+            }
+        });
+        FileMenu.add(QuitGameMenuItem);
+
+        jMenuBar1.add(FileMenu);
+
+        GameMenu.setText("Game");
+
+        StartGameMenuItem.setText("Start New Game");
+        StartGameMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StartGameMenuItemActionPerformed(evt);
+            }
+        });
+        GameMenu.add(StartGameMenuItem);
+
+        ResetScoreMenuItem.setText("Reset Score");
+        ResetScoreMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ResetScoreMenuItemActionPerformed(evt);
+            }
+        });
+        GameMenu.add(ResetScoreMenuItem);
+
+        jMenuBar1.add(GameMenu);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -710,13 +756,13 @@ public class gameform extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
+
     //=================================END=Generated=Code=======================================
-    
-    
+
+
     //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=START-GAME-BUTTON-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     private void startGameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startGameButtonActionPerformed
-        
+
         //"disable" or flip all of the letter tiles by making them all grey.  (they're actually all disabled always, so the user can't cheat.)
         letterTile1.setBackground(Color.lightGray);
         letterTile1.setText("");
@@ -742,17 +788,17 @@ public class gameform extends javax.swing.JFrame {
         letterTile11.setText("");
         letterTile12.setBackground(Color.lightGray);
         letterTile12.setText("");
-        
+
         //clear the guess word box, and the answer box.
         GuessWordBox.setText("");
         displayRightAnswer.setText("");
-        
+
         //set the wins and losses screens with the variable stored
         sWinsCounter = Integer.toString(winsCounter);
         WinsScreen.setText(sWinsCounter);
         sLoseCounter = Integer.toString(LoseCounter);
         LossesScreen.setText(sLoseCounter);
-        
+
         //re-enable all of the buttons, they are disabled until a new game is started.
         Abutton.setEnabled(true);
         Bbutton.setEnabled(true);
@@ -784,62 +830,62 @@ public class gameform extends javax.swing.JFrame {
         GuessWordBox.setEnabled(true);
         GuessEnterButton.setEnabled(true);
         GuessWordBox.setEnabled(true);
-        
-        //set icon and tries counter            
+
+        //set icon and tries counter
         hangScreen.setIcon(new javax.swing.ImageIcon("/home/reprise/Dropbox/Programming/01 Java/Hangman/hangImg/post.png"));
         chancesLeftCounter = 6;
         triesLeftScreen.setText("6");
-        
+
         //get user requested difficulty. index 0 is easy, index 1 is medium, index 2 is hard.
         difficulty = DifficultyCombobox.getSelectedIndex();
         System.out.println("\ndifficulty index: " + difficulty );
-       
+
         if (difficulty == 0){
             //easy game started
-            
+
             //shuffle the bag and pick a word
             wordToGuess = game.doWordBag1();
             System.out.println("Word: " + wordToGuess);
-            
+
             //Set up the guesser tiles.
             wordToGuessLength = wordToGuess.length();
-            initializeTiles(wordToGuessLength); 
+            initializeTiles(wordToGuessLength);
         }
-        
+
         else if (difficulty == 1){
             //medium game started
-            
+
             //shuffle the bag and pick a word
             wordToGuess = game.doWordBag2();
             System.out.println("Word: " + wordToGuess);
-            
+
             //Set up the guesser tiles.
             wordToGuessLength = wordToGuess.length();
             initializeTiles(wordToGuessLength);
         }
-        
+
         else if (difficulty == 2){
             //hard game started
-            //shuffle the bag and pick a word
 
+            //shuffle the bag and pick a word
             wordToGuess = game.doWordBag3();
             System.out.println("Word: " + wordToGuess);
-            
+
             //Set up the guesser tiles.
             wordToGuessLength = wordToGuess.length();
             initializeTiles(wordToGuessLength);
-        }   
+        }
     }//GEN-LAST:event_startGameButtonActionPerformed
 
     //A Button Press
     private void AbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AbuttonActionPerformed
         letter = 'a';
         sLetter= "a";
-        
+
         Abutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -858,9 +904,9 @@ public class gameform extends javax.swing.JFrame {
             sChancesLeft = Integer.toString(chancesLeftCounter);
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
-            GuessWordBox.setText(""); 
-        } 
-        
+            GuessWordBox.setText("");
+        }
+
         win = TestTileWin(wordToGuessLength);
         if (win){
             chancesLeftCounter = 0;
@@ -879,29 +925,29 @@ public class gameform extends javax.swing.JFrame {
             winsCounter++;
             sWinsCounter = Integer.toString(winsCounter);
             WinsScreen.setText(sWinsCounter);
-            
+
             hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
- 
+            System.out.println("*WIN by text box response*");
         }
         else{
-            //they're wrong so take away a chance left.
+            //wrong response, but game isn't over. remove a chance left.
             chancesLeftCounter--;
             sChancesLeft = Integer.toString(chancesLeftCounter);
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
             GuessWordBox.setText("");
-        }  
+        }
     }//GEN-LAST:event_GuessEnterButtonActionPerformed
 
     //B Button Press
     private void BbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BbuttonActionPerformed
         letter = 'b';
         sLetter= "b";
-        
+
         Bbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -921,8 +967,8 @@ public class gameform extends javax.swing.JFrame {
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
             GuessWordBox.setText("");
-        } 
-        
+        }
+
         win = TestTileWin(wordToGuessLength);
         if (win){
             chancesLeftCounter = 0;
@@ -935,11 +981,11 @@ public class gameform extends javax.swing.JFrame {
     private void CbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CbuttonActionPerformed
         letter = 'c';
         sLetter= "c";
-        
+
         Cbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -959,8 +1005,8 @@ public class gameform extends javax.swing.JFrame {
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
             GuessWordBox.setText("");
-        } 
-        
+        }
+
         win = TestTileWin(wordToGuessLength);
         if (win){
             chancesLeftCounter = 0;
@@ -973,11 +1019,11 @@ public class gameform extends javax.swing.JFrame {
     private void DbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DbuttonActionPerformed
         letter = 'd';
         sLetter= "d";
-        
+
         Dbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -997,8 +1043,8 @@ public class gameform extends javax.swing.JFrame {
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
             GuessWordBox.setText("");
-        }  
-        
+        }
+
         win = TestTileWin(wordToGuessLength);
         if (win){
             chancesLeftCounter = 0;
@@ -1011,11 +1057,11 @@ public class gameform extends javax.swing.JFrame {
     private void EbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EbuttonActionPerformed
       letter = 'e';
       sLetter= "e";
-        
+
         Ebutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1035,8 +1081,8 @@ public class gameform extends javax.swing.JFrame {
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
             GuessWordBox.setText("");
-        } 
-        
+        }
+
         win = TestTileWin(wordToGuessLength);
         if (win){
             chancesLeftCounter = 0;
@@ -1049,11 +1095,11 @@ public class gameform extends javax.swing.JFrame {
     private void FbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FbuttonActionPerformed
         letter = 'f';
         sLetter= "f";
-        
+
         Fbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1091,7 +1137,7 @@ public class gameform extends javax.swing.JFrame {
         Gbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1129,7 +1175,7 @@ public class gameform extends javax.swing.JFrame {
         Hbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1167,7 +1213,7 @@ public class gameform extends javax.swing.JFrame {
         Ibutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1205,7 +1251,7 @@ public class gameform extends javax.swing.JFrame {
         Jbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1243,7 +1289,7 @@ public class gameform extends javax.swing.JFrame {
         Kbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1281,7 +1327,7 @@ public class gameform extends javax.swing.JFrame {
         Lbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1319,7 +1365,7 @@ public class gameform extends javax.swing.JFrame {
         Mbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1357,7 +1403,7 @@ public class gameform extends javax.swing.JFrame {
         Nbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1395,7 +1441,7 @@ public class gameform extends javax.swing.JFrame {
         Obutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1432,7 +1478,7 @@ public class gameform extends javax.swing.JFrame {
         Pbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1452,8 +1498,8 @@ public class gameform extends javax.swing.JFrame {
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
             GuessWordBox.setText("");
-        } 
-        
+        }
+
         win = TestTileWin(wordToGuessLength);
         if (win){
             chancesLeftCounter = 0;
@@ -1466,11 +1512,11 @@ public class gameform extends javax.swing.JFrame {
     private void QbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QbuttonActionPerformed
         letter = 'q';
         sLetter= "q";
-        
+
         Qbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1490,8 +1536,8 @@ public class gameform extends javax.swing.JFrame {
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
             GuessWordBox.setText("");
-        } 
-        
+        }
+
         win = TestTileWin(wordToGuessLength);
         if (win){
             chancesLeftCounter = 0;
@@ -1504,11 +1550,11 @@ public class gameform extends javax.swing.JFrame {
     private void RbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RbuttonActionPerformed
         letter = 'r';
         sLetter= "r";
-        
+
         Rbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1528,8 +1574,8 @@ public class gameform extends javax.swing.JFrame {
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
             GuessWordBox.setText("");
-        } 
-        
+        }
+
         win = TestTileWin(wordToGuessLength);
         if (win){
             chancesLeftCounter = 0;
@@ -1542,11 +1588,11 @@ public class gameform extends javax.swing.JFrame {
     private void SbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SbuttonActionPerformed
         letter = 's';
         sLetter= "s";
-        
+
         Sbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1566,8 +1612,8 @@ public class gameform extends javax.swing.JFrame {
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
             GuessWordBox.setText("");
-        }  
-        
+        }
+
         win = TestTileWin(wordToGuessLength);
         if (win){
             chancesLeftCounter = 0;
@@ -1580,11 +1626,11 @@ public class gameform extends javax.swing.JFrame {
     private void TbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TbuttonActionPerformed
         letter = 't';
         sLetter= "t";
-        
+
         Tbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1604,8 +1650,8 @@ public class gameform extends javax.swing.JFrame {
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
             GuessWordBox.setText("");
-        } 
-        
+        }
+
         win = TestTileWin(wordToGuessLength);
         if (win){
             chancesLeftCounter = 0;
@@ -1618,11 +1664,11 @@ public class gameform extends javax.swing.JFrame {
     private void UbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UbuttonActionPerformed
         letter = 'u';
         sLetter= "u";
-        
+
         Ubutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1642,8 +1688,8 @@ public class gameform extends javax.swing.JFrame {
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
             GuessWordBox.setText("");
-        }  
-        
+        }
+
         win = TestTileWin(wordToGuessLength);
         if (win){
             chancesLeftCounter = 0;
@@ -1656,11 +1702,11 @@ public class gameform extends javax.swing.JFrame {
     private void VbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VbuttonActionPerformed
         letter = 'v';
         sLetter= "v";
-        
+
         Vbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1680,8 +1726,8 @@ public class gameform extends javax.swing.JFrame {
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
             GuessWordBox.setText("");
-        } 
-        
+        }
+
         win = TestTileWin(wordToGuessLength);
         if (win){
             chancesLeftCounter = 0;
@@ -1694,11 +1740,11 @@ public class gameform extends javax.swing.JFrame {
     private void WbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WbuttonActionPerformed
         letter = 'w';
         sLetter= "w";
-        
+
         Wbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1718,8 +1764,8 @@ public class gameform extends javax.swing.JFrame {
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
             GuessWordBox.setText("");
-        } 
-        
+        }
+
         win = TestTileWin(wordToGuessLength);
         if (win){
             chancesLeftCounter = 0;
@@ -1732,11 +1778,11 @@ public class gameform extends javax.swing.JFrame {
     private void XbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XbuttonActionPerformed
         letter = 'x';
         sLetter= "x";
-        
+
         Xbutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1756,7 +1802,7 @@ public class gameform extends javax.swing.JFrame {
             triesLeftScreen.setText(sChancesLeft);
             changeHangmanIcon();
             GuessWordBox.setText("");
-        } 
+        }
         win = TestTileWin(wordToGuessLength);
         if (win){
             chancesLeftCounter = 0;
@@ -1769,11 +1815,11 @@ public class gameform extends javax.swing.JFrame {
     private void YbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YbuttonActionPerformed
         letter = 'y';
         sLetter= "y";
-        
+
         Ybutton.setEnabled(false);
         correctResponse = game.testLetterResponse(letter);
         if (correctResponse){
-            int index = 0;
+            int index;
 
             index = wordToGuess.indexOf(letter);
             System.out.println("FirstInstanceIndex: " + index);
@@ -1843,12 +1889,32 @@ public class gameform extends javax.swing.JFrame {
 
     //is this how you add a keybinding to a button...?  I don't know.
     private void GuessEnterButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_GuessEnterButtonKeyPressed
-        // TODO add your handling code here:
-        
+        // TODO add your handling code here:       
     }//GEN-LAST:event_GuessEnterButtonKeyPressed
-    
+
+    //File>Quit, Quits the game
+    private void QuitGameMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitGameMenuItemActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_QuitGameMenuItemActionPerformed
+
+    //will call the code from the StartGame button, to begin a new game.
+    private void StartGameMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartGameMenuItemActionPerformed
+        startGameButtonActionPerformed(evt);
+    }//GEN-LAST:event_StartGameMenuItemActionPerformed
+
+    //resets win/loss counter back to zero.
+    private void ResetScoreMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResetScoreMenuItemActionPerformed
+                LoseCounter = 0;
+                sLoseCounter = Integer.toString(LoseCounter);
+                LossesScreen.setText(sLoseCounter);
+                
+                winsCounter = 0;
+                sWinsCounter = Integer.toString(winsCounter);
+                WinsScreen.setText(sWinsCounter);
+    }//GEN-LAST:event_ResetScoreMenuItemActionPerformed
+
     //based on how many tries left, will update the hangman image.
-    private void changeHangmanIcon(){            
+    private void changeHangmanIcon(){
         switch (chancesLeftCounter){
             case 5: 
                 hangScreen.setIcon(new javax.swing.ImageIcon("/home/reprise/Dropbox/Programming/01 Java/Hangman/hangImg/wrong1.png"));
@@ -1864,40 +1930,29 @@ public class gameform extends javax.swing.JFrame {
                 break;
             case 1: 
                 hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong5.png"));
+                break;
             case 0: 
                 //the game is over
+
                 hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong6.png"));
                 //and then disable all of the buttons.  they will be re-enabled when the user clicks "start game".
                 disableGame();
 
-//                //loop through the word and print it out.
-//                wordToGuessLength = wordToGuess.length();
-//                int index = 0;
-//                int letterIndex = 0;
-//                while (index <= wordToGuess.length()){
-//                    
-//                    letter = wordToGuess.charAt(index);                         //this csused a crash with the letter r
-//                    flipTile(index, sLetter);  //need to send over letter.
-//                    index++;
-//                }
-                
                 //simply display the right answer in a label for now while figuring how to fill in the tiles.
                 displayRightAnswer.setText("Correct Word: " + wordToGuess);
-                
+
                 //update the losses counter and screen
                 LoseCounter++;
                 sLoseCounter = Integer.toString(LoseCounter);
                 LossesScreen.setText(sLoseCounter);
-                
-                break;      
+                break;
         }
     }
-    
+
     //based on how many letters in the secret word, it will "initialize" that many tiles with color and underscore.
     public void initializeTiles(int wordToGuessLength){
-        //based on the length of the word, initialize that many tiles so the user
-        //knows how many letters are in the word.
-        
+
+
         switch (wordToGuessLength){
             case 1:
                 letterTile1.setBackground(Color.cyan);
@@ -1986,7 +2041,6 @@ public class gameform extends javax.swing.JFrame {
                 letterTile7.setText("_");
                 letterTile8.setBackground(Color.cyan);
                 letterTile8.setText("_");
-                
                 break;
             case 9:
                 letterTile1.setBackground(Color.cyan);
@@ -2080,10 +2134,9 @@ public class gameform extends javax.swing.JFrame {
                 letterTile12.setBackground(Color.cyan);
                 letterTile12.setText("_");
                 break;
-  
-        }        
+        }
     }
-    
+
     //Change a previously "activated" (underscore) tile into the letter it is supposed to be after the user guesses it right.
     public void flipTile(int index, String letter){
         switch (index){
@@ -2135,13 +2188,13 @@ public class gameform extends javax.swing.JFrame {
                 //flip tile 12 to the letter sent, at this index.
                 letterTile12.setText(letter);
                 break;
-        } 
+        }
     }
-    
+
     //tests if the user won by filling in tiles and not by typing the word in the box.
     public boolean TestTileWin(int wordToGuessLength){
         boolean win = false;
-        
+
         //based on how many tiles are initialized, or the wordToGuessLength, is how many tiles to check for underscores.
         switch (wordToGuessLength){
             case 1:
@@ -2230,18 +2283,18 @@ public class gameform extends javax.swing.JFrame {
                 }
                 break;
         } //end switch(wordToGuessLength)
-        
+
         if (win){
             winsCounter++;
             sWinsCounter = Integer.toString(winsCounter);
             WinsScreen.setText(sWinsCounter);
         }
-        return win;      
+        return win;
     }
     
     //
     public static void main(String args[]) {
-         
+
         /* Set the Nimbus look and feel */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -2268,7 +2321,7 @@ public class gameform extends javax.swing.JFrame {
             }
         });
     }
-    
+
     //simply disables the buttons and other graphical items.  used when the game has ended
     public void disableGame(){
         Abutton.setEnabled(false);
@@ -2300,6 +2353,7 @@ public class gameform extends javax.swing.JFrame {
         GuessEnterButton.setEnabled(false);
         GuessWordBox.setEnabled(false);
     }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Abutton;
     private javax.swing.JButton Bbutton;
@@ -2309,6 +2363,8 @@ public class gameform extends javax.swing.JFrame {
     private javax.swing.JLabel DifficultyLabel;
     private javax.swing.JButton Ebutton;
     private javax.swing.JButton Fbutton;
+    private javax.swing.JMenu FileMenu;
+    private javax.swing.JMenu GameMenu;
     private javax.swing.JButton Gbutton;
     private javax.swing.JButton GuessEnterButton;
     private javax.swing.JTextField GuessWordBox;
@@ -2325,8 +2381,12 @@ public class gameform extends javax.swing.JFrame {
     private javax.swing.JButton Pbutton;
     private javax.swing.JLabel ProgrammerLabel;
     private javax.swing.JButton Qbutton;
+    private javax.swing.JMenuItem QuitGameMenuItem;
     private javax.swing.JButton Rbutton;
+    private javax.swing.JMenuItem ResetScoreMenuItem;
+    private javax.swing.JMenuItem SaveScoreMenuItem;
     private javax.swing.JButton Sbutton;
+    private javax.swing.JMenuItem StartGameMenuItem;
     private javax.swing.JButton Tbutton;
     private javax.swing.JButton Ubutton;
     private javax.swing.JButton Vbutton;
@@ -2340,6 +2400,7 @@ public class gameform extends javax.swing.JFrame {
     private javax.swing.JLabel hangScreen;
     private javax.swing.JPanel hangScreenPanel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField letterTile1;
     private javax.swing.JTextField letterTile10;
@@ -2358,22 +2419,20 @@ public class gameform extends javax.swing.JFrame {
     private javax.swing.JTextField triesLeftScreen;
     // End of variables declaration//GEN-END:variables
 
-//GLOBAL VARIABLES:
-WordShuffle game = new WordShuffle();
-boolean correctResponse = false;//used to collect the returned value of testLetterResponse(String letter); to check if the char response exists AT ALL before further processing.
-boolean win = false;            //used to collect the returned value of testTileWin(int wordToGuessLength);  that tests if there's a win in the tiles.
-int difficulty = 0;             //difficulty index from the combo box.
-String wordToGuess = "";        //this is the word to test against.  the secret word.
-String guessedWord = "";        //what the user TYPED to guess.
-char letter;                    //guessed letter from a button
-String sLetter;                 //string version of char letter, to be sent to flipped tiles. needs to be a string type.
-int wordToGuessLength = 0;      //how long the wordToGuess is, used to draw the underscores.
-int chancesLeftCounter = 6;     //how many tries are left.  decrements with wrong attempts.
-String sChancesLeft;            //the string version of chancesLeftCounter, to be sent to be displayed.
-String guesserScreenVar;        //used to display the guess screen after letters are typed in. guesserScreen is the component it goes to.
-int winsCounter = 0;            //tracks/tallies wins
-int LoseCounter = 0;            //tracks/tallies losses
-String sWinsCounter;            //the string version that goes to the label.
-String sLoseCounter;            //the string version that goes to the label.
-
+    //GLOBAL VARIABLES:
+    WordShuffle game = new WordShuffle();
+    boolean correctResponse = false;//used to collect the returned value of testLetterResponse(String letter); checks if the char is in the word.
+    boolean win = false;            //used to collect the returned value of testTileWin(int wordToGuessLength); did user fill all tiles?
+    int difficulty = 0;             //difficulty index from the combo box.
+    String wordToGuess = "";        //this is the word to test against.  the secret word.
+    String guessedWord = "";        //what the user TYPED to guess.
+    char letter;                    //guessed letter from a button
+    String sLetter;                 //string version of char letter, to be sent to flipped tiles. needs to be a string type.
+    int wordToGuessLength = 0;      //how long the wordToGuess is, used to draw the underscores.
+    int chancesLeftCounter = 6;     //how many tries are left.  decrements with wrong attempts.
+    String sChancesLeft;            //the string version of chancesLeftCounter, to be sent to be displayed.
+    int winsCounter = 0;            //tracks/tallies wins
+    int LoseCounter = 0;            //tracks/tallies losses
+    String sWinsCounter;            //the string version that goes to the label.
+    String sLoseCounter;            //the string version that goes to the label.
 }
