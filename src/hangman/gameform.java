@@ -1,6 +1,7 @@
 package hangman;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -81,6 +82,7 @@ public class gameform extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         FileMenu = new javax.swing.JMenu();
         SaveScoreMenuItem = new javax.swing.JMenuItem();
+        AboutMenuOption = new javax.swing.JMenuItem();
         QuitGameMenuItem = new javax.swing.JMenuItem();
         GameMenu = new javax.swing.JMenu();
         StartGameMenuItem = new javax.swing.JMenuItem();
@@ -92,7 +94,7 @@ public class gameform extends javax.swing.JFrame {
 
         hangScreenPanel.setLayout(null);
 
-        hangScreen.setIcon(new javax.swing.ImageIcon("/home/reprise/Dropbox/Programming/01 Java/Hangman/hangImg/post.png")); // NOI18N
+        hangScreen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hangman/post.png"))); // NOI18N
         hangScreen.setAutoscrolls(true);
         hangScreen.setFocusable(false);
         hangScreenPanel.add(hangScreen);
@@ -490,6 +492,14 @@ public class gameform extends javax.swing.JFrame {
         SaveScoreMenuItem.setToolTipText("Saves your current score to a file.");
         SaveScoreMenuItem.setEnabled(false);
         FileMenu.add(SaveScoreMenuItem);
+
+        AboutMenuOption.setText("About...");
+        AboutMenuOption.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AboutMenuOptionActionPerformed(evt);
+            }
+        });
+        FileMenu.add(AboutMenuOption);
 
         QuitGameMenuItem.setText("Quit");
         QuitGameMenuItem.addActionListener(new java.awt.event.ActionListener() {
@@ -1167,7 +1177,7 @@ public class gameform extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_GbuttonActionPerformed
 
-    //H Button Press
+    //H Button Press<none>
     private void HbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HbuttonActionPerformed
         letter = 'h';
         sLetter= "h";
@@ -1902,16 +1912,42 @@ public class gameform extends javax.swing.JFrame {
         startGameButtonActionPerformed(evt);
     }//GEN-LAST:event_StartGameMenuItemActionPerformed
 
-    //resets win/loss counter back to zero.
+    //Game>resetScore - resets win/loss counter back to zero.
     private void ResetScoreMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResetScoreMenuItemActionPerformed
-                LoseCounter = 0;
-                sLoseCounter = Integer.toString(LoseCounter);
-                LossesScreen.setText(sLoseCounter);
-                
-                winsCounter = 0;
-                sWinsCounter = Integer.toString(winsCounter);
-                WinsScreen.setText(sWinsCounter);
+        int n = JOptionPane.showConfirmDialog(
+            rootPane,
+            "You are about to reset your score.\n"
+                    + "You worked hard for those wins...and losses.\n"
+                    + "Are you sure you want to reset? There's no going back.",
+            "Are you sure, bro?",
+            JOptionPane.YES_NO_OPTION
+        );
+        
+        System.out.println("JOptionPane_ScoreReset var: " + n);
+        
+        if (n == 0){
+//            JOptionPane.showMessageDialog(rootPane, "RIOT.", "Hype? or riot?", WIDTH);
+                    
+            LoseCounter = 0;
+            sLoseCounter = Integer.toString(LoseCounter);
+            LossesScreen.setText(sLoseCounter);
+
+            winsCounter = 0;
+            sWinsCounter = Integer.toString(winsCounter);
+            WinsScreen.setText(sWinsCounter);
+        }
     }//GEN-LAST:event_ResetScoreMenuItemActionPerformed
+
+    //File>About... menu option.. just shows a dialog with a little bit of information about my project.
+    private void AboutMenuOptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AboutMenuOptionActionPerformed
+        JOptionPane.showMessageDialog(rootPane,
+                "                                        H A N G M A N             \n"
+              + "This is a simple GUI Program involving the clasic game \"Hangan\".\n"
+              + "This project was written entirely in Java by Danielle Marcoullier.\n"
+              + "You can find out more about this project on Github at:            \n"
+              + "           https://github.com/reprise5/Hangman                    \n", 
+                "**About HANGMAN**", WIDTH, null);
+    }//GEN-LAST:event_AboutMenuOptionActionPerformed
 
     //based on how many tries left, will update the hangman image.
     private void changeHangmanIcon(){
@@ -1933,6 +1969,7 @@ public class gameform extends javax.swing.JFrame {
                 break;
             case 0: 
                 //the game is over
+                System.out.println("*LOSS by tries left depleted to 0*");
 
                 hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong6.png"));
                 //and then disable all of the buttons.  they will be re-enabled when the user clicks "start game".
@@ -2355,6 +2392,7 @@ public class gameform extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem AboutMenuOption;
     private javax.swing.JButton Abutton;
     private javax.swing.JButton Bbutton;
     private javax.swing.JButton Cbutton;

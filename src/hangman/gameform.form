@@ -16,6 +16,14 @@
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="AboutMenuOption">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="About..."/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AboutMenuOptionActionPerformed"/>
+              </Events>
+            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="QuitGameMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Quit"/>
@@ -355,7 +363,7 @@
         <Component class="javax.swing.JLabel" name="hangScreen">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="/home/reprise/Dropbox/Programming/01 Java/Hangman/hangImg/post.png"/>
+              <Image iconType="3" name="/hangman/post.png"/>
             </Property>
             <Property name="autoscrolls" type="boolean" value="true"/>
             <Property name="focusable" type="boolean" value="false"/>

@@ -9,9 +9,7 @@ import java.util.Random;
 
 public class WordShuffle {
     //GLOBALS
-    StringBuilder stringBuilder = new StringBuilder();
     String wordToGuess;
-    String guesserScreen = "";
     int count = 0;
 
     //This is the "EASY" difficulty, random word generator
