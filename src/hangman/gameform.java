@@ -1,6 +1,7 @@
 package hangman;
 
 import java.awt.Color;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -842,7 +843,7 @@ public class gameform extends javax.swing.JFrame {
         GuessWordBox.setEnabled(true);
 
         //set icon and tries counter
-        hangScreen.setIcon(new javax.swing.ImageIcon("/home/reprise/Dropbox/Programming/01 Java/Hangman/hangImg/post.png"));
+        hangScreen.setIcon(Post);
         chancesLeftCounter = 6;
         triesLeftScreen.setText("6");
 
@@ -921,7 +922,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("/home/reprise/Dropbox/Programming/01 Java/Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_AbuttonActionPerformed
 
@@ -936,7 +937,7 @@ public class gameform extends javax.swing.JFrame {
             sWinsCounter = Integer.toString(winsCounter);
             WinsScreen.setText(sWinsCounter);
 
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
             System.out.println("*WIN by text box response*");
         }
         else{
@@ -983,7 +984,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_BbuttonActionPerformed
 
@@ -1021,7 +1022,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_CbuttonActionPerformed
 
@@ -1059,7 +1060,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_DbuttonActionPerformed
 
@@ -1097,7 +1098,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_EbuttonActionPerformed
 
@@ -1135,7 +1136,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_FbuttonActionPerformed
 
@@ -1173,7 +1174,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_GbuttonActionPerformed
 
@@ -1211,7 +1212,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_HbuttonActionPerformed
 
@@ -1249,7 +1250,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_IbuttonActionPerformed
 
@@ -1287,7 +1288,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_JbuttonActionPerformed
 
@@ -1325,7 +1326,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+           hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_KbuttonActionPerformed
 
@@ -1363,7 +1364,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_LbuttonActionPerformed
 
@@ -1401,7 +1402,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_MbuttonActionPerformed
 
@@ -1439,7 +1440,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_NbuttonActionPerformed
 
@@ -1476,7 +1477,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_ObuttonActionPerformed
 
@@ -1514,7 +1515,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_PbuttonActionPerformed
 
@@ -1552,7 +1553,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_QbuttonActionPerformed
 
@@ -1590,7 +1591,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_RbuttonActionPerformed
 
@@ -1628,7 +1629,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_SbuttonActionPerformed
 
@@ -1666,7 +1667,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_TbuttonActionPerformed
 
@@ -1704,7 +1705,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_UbuttonActionPerformed
 
@@ -1742,7 +1743,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_VbuttonActionPerformed
 
@@ -1780,7 +1781,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_WbuttonActionPerformed
 
@@ -1817,7 +1818,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_XbuttonActionPerformed
 
@@ -1855,7 +1856,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_YbuttonActionPerformed
 
@@ -1893,7 +1894,7 @@ public class gameform extends javax.swing.JFrame {
         if (win){
             chancesLeftCounter = 0;
             disableGame();
-            hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/a_winner.png"));
+            hangScreen.setIcon(Winner);
         }
     }//GEN-LAST:event_ZbuttonActionPerformed
 
@@ -1919,7 +1920,7 @@ public class gameform extends javax.swing.JFrame {
             "You are about to reset your score.\n"
                     + "You worked hard for those wins...and losses.\n"
                     + "Are you sure you want to reset? There's no going back.",
-            "Are you sure, bro?",
+            "Score reset confirmation",
             JOptionPane.YES_NO_OPTION
         );
         
@@ -1953,25 +1954,25 @@ public class gameform extends javax.swing.JFrame {
     private void changeHangmanIcon(){
         switch (chancesLeftCounter){
             case 5: 
-                hangScreen.setIcon(new javax.swing.ImageIcon("/home/reprise/Dropbox/Programming/01 Java/Hangman/hangImg/wrong1.png"));
+                hangScreen.setIcon(Wrong1);
                 break;
             case 4: 
-                hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong2.png"));
+                hangScreen.setIcon(Wrong2);
                 break;
             case 3: 
-                hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong3.png"));
+                hangScreen.setIcon(Wrong3);
                 break;
             case 2: 
-                hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong4.png"));
+                hangScreen.setIcon(Wrong4);
                 break;
             case 1: 
-                hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong5.png"));
+                hangScreen.setIcon(Wrong5);
                 break;
             case 0: 
                 //the game is over
                 System.out.println("*LOSS by tries left depleted to 0*");
 
-                hangScreen.setIcon(new javax.swing.ImageIcon("../Hangman/hangImg/wrong6.png"));
+                hangScreen.setIcon(Wrong6);
                 //and then disable all of the buttons.  they will be re-enabled when the user clicks "start game".
                 disableGame();
 
@@ -2473,4 +2474,14 @@ public class gameform extends javax.swing.JFrame {
     int LoseCounter = 0;            //tracks/tallies losses
     String sWinsCounter;            //the string version that goes to the label.
     String sLoseCounter;            //the string version that goes to the label.
+    
+    //Declaring icons used in hangScreen component.
+    ImageIcon Post   = new javax.swing.ImageIcon(getClass().getResource("/hangman/hangImg/post.png"));
+    ImageIcon Wrong1 = new javax.swing.ImageIcon(getClass().getResource("/hangman/hangImg/wrong1.png"));
+    ImageIcon Wrong2 = new javax.swing.ImageIcon(getClass().getResource("/hangman/hangImg/wrong2.png"));
+    ImageIcon Wrong3 = new javax.swing.ImageIcon(getClass().getResource("/hangman/hangImg/wrong3.png"));
+    ImageIcon Wrong4 = new javax.swing.ImageIcon(getClass().getResource("/hangman/hangImg/wrong4.png"));
+    ImageIcon Wrong5 = new javax.swing.ImageIcon(getClass().getResource("/hangman/hangImg/wrong5.png"));
+    ImageIcon Wrong6 = new javax.swing.ImageIcon(getClass().getResource("/hangman/hangImg/wrong6.png"));
+    ImageIcon Winner = new javax.swing.ImageIcon(getClass().getResource("/hangman/hangImg/a_winner.png"));
 }
